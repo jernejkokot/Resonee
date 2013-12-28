@@ -40,9 +40,29 @@
 			</div>
 			<div class="col-md-12" id="button">
 				<p>
-					<button type="button" class="btn btn-lg btn-info">Notify Me!</button>
+					<button type="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#myModal">Play video</button>
 				</p>
 			</div>
+			
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					 <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					
+				  </div>
+				  <div class="modal-body">
+					<iframe width="560" height="315" src="//www.youtube.com/embed/Kk1SMMkAE7s" frameborder="0" allowfullscreen></iframe>
+				  </div>
+				</div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+
+			
+			
 			<div class="col-md-12"> 
 			<p>Learn more</p>
 				<img src="images/icon_arrow.png" alt="Down Arrow">
