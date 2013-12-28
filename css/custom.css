@@ -176,6 +176,6 @@ p{
 	margin: 136px 0px;
 }
 
-#myModal h4 {
- margin: 0px;
+.modal-header {
+	border-bottom: none;
 }
