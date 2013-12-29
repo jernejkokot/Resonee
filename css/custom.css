@@ -177,14 +177,14 @@ p{
 }
 /* end footer section */
 
-.btn {
+#button {
 	background-color: #1eca9e;
 	width: 238px;
 	height: 62px;
 	font-size: 20px;
 	color: #ffffff;
 }
-.btn:hover {
+ #button:hover {
 	background-color: #39e6ba;
 	width: 238px;
 	height: 62px;
@@ -192,7 +192,7 @@ p{
 	color: #ffffff;
 }
 
-.btn:active, .btn:focus {
+#button:active, #button:focus {
 	color:#ffffff;
 }
 

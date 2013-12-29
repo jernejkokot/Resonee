@@ -39,9 +39,9 @@
 			<div class="col-md-12">
 				<h4>Be involved into every creative activity in real-time around the world!<h4>
 			</div>
-			<div class="col-md-12" id="button">
+			<div class="col-md-12">
 				<p>
-					<button type="button" class="btn" data-toggle="modal" data-target="#myModal">Play video</button>
+					<button type="button" class="btn" id="button" data-toggle="modal" data-target="#myModal">Play video</button>
 				</p>
 			</div>
 			
@@ -203,12 +203,80 @@
 			<div class="col-md-12"><h4>Coming fall 2014<h4></div>
 			<div class="col-md-12">
 				<p>
-					<button type="button" class="btn btn-lg btn-info">Notify Me!</button>
+					<button type="button" class="btn" id="button" data-toggle="modal" data-target="#myModalComing">Notify Me!</button>
 				</p>
 			</div>
 		</div>
 	  </div> 
 	</div> <!-- /coming -->
+	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModalComing" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		  </div>
+		  <div class="modal-body">		  
+			<form action="http://getsimpleform.com/messages?form_api_token=f99cda4694b94a54e52122fed02f8990" method="post" class="form-horizontal" role="form">
+			  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+			  <input type='hidden' name='redirect_to' value='http://jernejkokot.github.io/Resonee' /> 
+			  <!-- all your input fields here.... -->
+			  <div class="form-group">
+				<label for="inputEmail" class="col-sm-3 control-label">Email</label>
+				<div class="col-sm-7">
+				  <input type="email" class="form-control" id="Email" placeholder="Email" name="Email">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="InterestedIn" class="col-sm-3 control-label">My interests</label>
+				<div class="col-sm-7">
+				  <div class="checkbox">
+					<label>
+					  <input type="checkbox" value="Innovation" name="Innovation"> Innovation 
+					</label>
+				  </div>
+				</div>
+				<div class="col-sm-offset-3 col-sm-7">
+				  <div class="checkbox">
+					<label>
+					  <input type="checkbox" value="Research" name="Research"> Research
+					</label>
+				  </div>
+				</div>
+				<div class="col-sm-offset-3 col-sm-7">
+				  <div class="checkbox">
+					<label>
+					  <input type="checkbox" value="Development" name="Development"> Development 
+					</label>
+				  </div>
+				</div>
+				<div class="col-sm-offset-3 col-sm-7">
+				  <div class="checkbox">
+					<label>
+					  <input type="checkbox" value="Marketing" name="Marketing"> Marketing
+					</label>
+				  </div>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label for="otherInteres" class="col-sm-3 control-label">Other </label>
+				<div class="col-sm-7">
+					<input type="text" class="form-control" placeholder="Other interests" name="Other">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<div class="col-sm-offset-3 col-sm-7">
+				  <button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			  </div>
+	
+			</form>
+		  </div>
+		</div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 	
 	<div class="footer">
 	  <div class="container">
