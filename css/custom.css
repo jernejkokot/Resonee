@@ -72,6 +72,7 @@ p{
 .inno h4 {
 	color: #7e848e;
 	line-height: 36px;
+	font-weight: 300;
 }
 /* end inno section */
 
@@ -148,7 +149,6 @@ p{
 
 .coming h2 {
 	margin-bottom:  36px;
-	font-weight: 300;
 }
 
 .coming h4 {
