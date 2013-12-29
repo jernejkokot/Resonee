@@ -30,8 +30,8 @@
     <div class="intro">
 	  <div class="container">
 		<div class="row" id="content">
-			<div class="col-md-12" id="logo">
-				<img src="images/logo.png" alt="Logo Resonee" >
+			<div class="col-md-12">
+				<img src="images/logo.png" alt="Logo Resonee" id="logo">
 			</div>
 			<div class="col-md-12">
 				<h1>MAKE IDEAS HAPPEN!<h1>
@@ -64,7 +64,7 @@
 			
 			<div class="col-md-12"> 
 			<p>Learn more</p>
-				<img src="images/icon_arrow.png" alt="Down Arrow">
+				<button id="learnMore" class="btn btn-link"><img src="images/icon_arrow.png" alt="Down Arrow"></button> 
 			</div>
 		</div>
 	  </div> 
@@ -296,18 +296,24 @@
 		$(function(){
 			var $content = $('#content');
 			var $window = $(window).on('resize', function(){
-			   var height = $(window).height();
+			   var height = $(window).height()-100;
 			   
 				if(height > 610)
 				{
 					var result = Math.round((height - 610)/2);
-					$('.intro #logo').css('margin-bottom', result);
-					$('.intro #button').css('margin-bottom', result-20);
+					$('.intro #logo').css('margin-bottom', result+50);
+					$('.intro #button').css('margin-bottom', result+30);
 				}
 				
 			   $content.height(height);
 			}).trigger('resize'); //on page load
 
+		});
+		
+		$("#learnMore").click(function() {
+			$('html, body').animate({
+				scrollTop: $(".inno").offset().top
+			}, 2000);
 		});
 	</script>
   </body>
