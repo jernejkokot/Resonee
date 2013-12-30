@@ -208,3 +208,5 @@ p{
 .modal-header {
 	border-bottom: none;
 }
+
+.modal .modal-dialog { width: 900px; }
