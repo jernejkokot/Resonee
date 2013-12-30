@@ -130,6 +130,7 @@ p{
 	color: #7e848e;
 	text-align: left;
 	font-weight: 300;
+	line-height: 32px;
 }
 @media all and (max-width:992px)
 {
