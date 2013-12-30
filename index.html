@@ -51,10 +51,10 @@
 			  <div class="modal-dialog">
 				<div class="modal-content">
 				  <div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">&times;</button>
 				  </div>
 				  <div class="modal-body">
-					<iframe width="560" height="315" src="http://www.youtube.com/embed/JW4Zt3B9wPs" frameborder="0" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="http://www.youtube.com/embed/JW4Zt3B9wPs" frameborder="0" id="playerID" allowfullscreen></iframe>
 				  </div>
 				</div><!-- /.modal-content -->
 			  </div><!-- /.modal-dialog -->
@@ -321,6 +321,22 @@
 				scrollTop: $(".inno").offset().top
 			}, 2000);
 		});
+		
+		
+		
+		$("#close").click(function() {
+			
+			//First get the  iframe URL
+			var url = $('#playerID').attr('src');
+
+			//Then assign the src to null, this then stops the video been playing
+			$('#playerID').attr('src', '');
+
+			// Finally you reasign the URL back to your iframe, so when you hide and load it again you still have the link
+			$('#playerID').attr('src', url);
+			
+		});
+		
 	</script>
   </body>
 </html>
