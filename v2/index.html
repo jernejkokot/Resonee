@@ -25,11 +25,36 @@
   </head>
   
   <body>
+  
+	  <!-- Modal -->
+	<div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="navbar">
+			<div class="col-xs-6 logo"><img src="images/header-logo.png"></div>
+			<div class="col-xs-6 menu"> 
+				<a href="#" data-dismiss="modal"> Close <img src="images/x_black_white.jpg"></a>
+			</div>
+		</div>	
+		<div class="modal-menu">
+			<ul>
+				<a href="#"><li>Home</li></a>
+				<a href="#"><li>Process</li></a>
+				<a href="#"><li>About</li></a>
+				<a href="#"><li>News</li></a>
+				<a href="#"><li>Contact</li></a>
+			</ul>
+		</div>
+
+	</div>
+
+  
     <div class="intro">
 		<div class="wrapper">
 			<div class="row navbar">
-				<div class="col-xs-6" id="logo-header"><img src="images/header-logo.png"></div>
-				<div class="col-xs-6" id="menu">Menu</div>
+				<div class="col-xs-6 logo"><img src="images/header-logo.png"></div>
+				<div class="col-xs-6 menu"> 
+					<a href="#" id="menu-link"> Menu <img src="images/bars_black_silver.jpg"></a>
+				</div>
+					
 			</div>
 		</div>
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -96,14 +121,14 @@
 		  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
 		  <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 		</div><!-- /.carousel -->
-		<div class="intro-text">
-			<div class="container" >
-				<div class="row">
-					<p>Lorem ipsum dolor sit amet, metus alias, ac risus sit aliquet justo, aliquam facilisis proin lectus dui quisque. Quam lacus aenean risus, urna ut praesent pede. Etiam sed, velit pede pellentesque eu dolor et rhoncus, in ridiculus at.</p>
-				</div>
-			</div>
-		</div><!-- /.intro-text -->
 	</div><!-- /.intro --> 
+	<div class="intro-text">
+		<div class="container" >
+			<div class="row">
+					<p>Lorem ipsum dolor sit amet, metus alias, ac risus sit aliquet justo, aliquam facilisis proin lectus dui quisque. Quam lacus aenean risus, urna ut praesent pede. Etiam sed, velit pede pellentesque eu dolor et rhoncus, in ridiculus at.</p>
+			</div>
+		</div>
+	</div><!-- /.intro-text -->
 	<div class="platform">
 		<div class="container">
 			<div class="row">				
@@ -190,24 +215,22 @@
 		$(function(){
 			var $window = $(window).on('resize', function(){
 			    var height = $(window).height();
-				if(height > 610)
+				if(height > 500)
 				{
-					var result70 = Math.round((height * 70)/100);
-					var result30 = Math.round((height * 30)/100);
-
-					$('.carousel').css('height', result70);
-					$('.carousel .item').css('height', result70);
-					$('.intro-text').css('height', result30);
+					$('.carousel').css('height', height);
+					$('.carousel .item').css('height', height);
+					
 				}
-				
-				//
-				var heightIntroText = $('.intro-text p').height();
-				var resultIntroText = Math.round((result30 - heightIntroText)/2)-10;
-				$('.intro-text').css('padding-top', resultIntroText);
-				
 			}).trigger('resize'); //on page load
 
 		});
+		
+		$('#menu-link').click(function() {
+			$('#menuModal').modal('show');
+			$('.carousel').carousel('pause');
+		});
+
+
 		</script>
   </body>
 </html>
