@@ -229,8 +229,18 @@
 			$('#menuModal').modal('show');
 			$('.carousel').carousel('pause');
 		});
-
-
+		
+		$('#menuModal').on('show.bs.modal', function(e) {
+			if(isIE())
+			{
+				$('.modal > .navbar').css('margin-right', '45px');
+			}
+		})
+	
+		function isIE () {
+		  var myNav = navigator.userAgent.toLowerCase();
+		  return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+		}
 		</script>
   </body>
 </html>

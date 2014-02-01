@@ -67,15 +67,9 @@ h3 {
   z-index:20;
 } 
 
-.wrapper > .navbar {
+.navbar {
   margin: 60px 60px 0px 60px;
 }
-
-
-.modal > .navbar {
-  margin: 60px 60px 0px 60px;
-}
-
 
 .logo {
 	padding: 0px;
@@ -117,8 +111,6 @@ h3 {
 	text-decoration: none;
 	color: #FFF;
 }
-
-
 
 /* INTRO-TEXT
 -------------------------------------------------- */
