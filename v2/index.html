@@ -28,7 +28,7 @@
   
 	  <!-- Modal -->
 	<div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="navbar">
+		<div class="row navbar">
 			<div class="col-xs-6 logo"><img src="images/header-logo.png"></div>
 			<div class="col-xs-6 menu"> 
 				<a href="#" data-dismiss="modal"> Close <img src="images/x_black_white.jpg"></a>
@@ -230,17 +230,14 @@
 			$('.carousel').carousel('pause');
 		});
 		
-		$('#menuModal').on('show.bs.modal', function(e) {
-			if(isIE())
-			{
-				$('.modal > .navbar').css('margin-right', '45px');
-			}
+		$('#menuModal').on('hidden.bs.modal', function (e) {
+			$('.wrapper > .navbar > .menu').css('visibility', 'visible');
 		})
-	
-		function isIE () {
-		  var myNav = navigator.userAgent.toLowerCase();
-		  return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
-		}
+
+		$('#menuModal').on('show.bs.modal', function (e) {
+			$('.wrapper > .navbar > .menu').css('visibility', 'hidden');
+		})
+
 		</script>
   </body>
 </html>
