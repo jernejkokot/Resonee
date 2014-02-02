@@ -121,8 +121,8 @@ h3 {
 /* INTRO-TEXT
 -------------------------------------------------- */
 .intro-text {
-	padding-top: 140px;
-	padding-bottom: 140px;
+	padding-top: 130px;
+	padding-bottom: 130px;
 }
 
 .intro-text p {
@@ -226,6 +226,7 @@ padding-bottom: 145px;
 
 .footer .footer-text {
 	height:80px;
+	padding-top: 10px;
 }
 
 .footer #copy {
@@ -267,7 +268,7 @@ padding-bottom: 145px;
 }
 
 .carousel-indicators {
-	margin-bottom: 30px;
+	margin-bottom: 5px;
 }
 
 .left.carousel-control, .right.carousel-control {
