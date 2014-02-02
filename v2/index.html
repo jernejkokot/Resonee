@@ -25,8 +25,7 @@
   </head>
   
   <body>
-  
-	  <!-- Modal -->
+	
 	<div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="row navbar">
 			<div class="col-xs-6 logo"><img  src="images/header-logo.png"></div>
@@ -36,29 +35,23 @@
 		</div>	
 		<div class="modal-menu">
 			<ul>
-				<a href="#"><li>Home</li></a>
-				<a href="#"><li>Process</li></a>
-				<a href="#"><li>About</li></a>
-				<a href="#"><li>News</li></a>
-				<a href="#"><li>Contact</li></a>
+				<a href="index.html"><li>Home</li></a>
+				<a href="how-it-works.html"><li>Process</li></a>
+				<a href="about.html"><li>About</li></a>
+				<a href="news.html"><li>News</li></a>
+				<a href="contact.html"><li>Contact</li></a>
 			</ul>
 		</div>
-
-	</div>
-
-  
-    <div class="intro">
-		<div class="wrapper">
-			<div class="row navbar">
-				<div class="col-xs-6 logo"><img src="images/header-logo.png"></div>
-				<div class="col-xs-6 menu"> 
-					<a href="#" id="menu-link"> Menu <img src="images/bars_black_silver.jpg"></a>
-				</div>
-					
-			</div>
+	</div> <!-- /.modal -->
+	
+	<div class="navbar row">
+		<div class="col-xs-6 logo"><img src="images/header-logo.png"></div>
+		<div class="col-xs-6 menu"> 
+			<a href="#" id="menu-link"> Menu <img src="images/bars_black_silver.jpg"></a>
 		</div>
+	</div>  <!-- /.navbar -->
+    <div class="intro">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		  <!-- Indicators -->
 		  <ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
@@ -190,7 +183,7 @@
 		<div class="container">
 			<h2>Get early access</h2>
 			<p>Massa lobortis, gravida fugiat dolor suspendisse turpis. Nec mauris nascetur arcu sed turpis sed, pede mauris in urna elit. Et sapien accumsan ut vitae, consectetur dolorem. Egestas leo lacinia, qui rerum egestas sed tincidunt rhoncus fusce.</p>
-			<div class="center"><a class="btn btn-lg" href="#" role="button">Apply now</a></div>
+			<div class="text-center"><a class="btn btn-lg" href="#" role="button">Apply now</a></div>
 		</div>
 	</div><!-- /.early-access -->
 	<div class="footer">
@@ -211,7 +204,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-			<script>
+	<script>
 		$(function(){
 			var $window = $(window).on('resize', function(){
 			    var height = $(window).height();
@@ -231,13 +224,13 @@
 		});
 		
 		$('#menuModal').on('hidden.bs.modal', function (e) {
-			$('.wrapper > .navbar > .menu').css('visibility', 'visible');
+			$('#menu-link').css('visibility', 'visible');
 		})
 
 		$('#menuModal').on('show.bs.modal', function (e) {
-			$('.wrapper > .navbar > .menu').css('visibility', 'hidden');
+			$('#menu-link').css('visibility', 'hidden');
 		})
 
-		</script>
+	</script>
   </body>
 </html>

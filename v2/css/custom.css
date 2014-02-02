@@ -59,19 +59,12 @@ h3 {
 	vertical-align: top;
 }
 
-.intro .wrapper {
+.navbar {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index:20;
-} 
-
-.wrapper > .navbar {
-  margin: 60px 60px 0px 60px;
-}
-
-.modal > .navbar {
   margin: 60px 60px 0px 60px;
 }
 
@@ -84,6 +77,9 @@ h3 {
 	text-decoration: none;
 }
 
+/* MODAL MENU POP-UP
+-------------------------------------------------- */
+
 .modal-menu {
 	
 	text-align: center;
@@ -92,7 +88,6 @@ h3 {
 	font-weight: 600;
 	height: 386px;
 	width: 100%;
-	
 	position: absolute;
     top:0;
     bottom: 0;
@@ -105,10 +100,6 @@ h3 {
 .modal-menu ul{
 	list-style-type: none;
 	padding: 0px;
-}
-
-.modal-menu li {
-	
 }
 
 .modal-menu li:hover{
@@ -199,8 +190,8 @@ h3 {
 /* EARLY ACCESS
 -------------------------------------------------- */
 .early-access{
-padding-top: 145px;
-padding-bottom: 145px;
+	padding-top: 145px;
+	padding-bottom: 145px;
 }
 
 .early-access p {
@@ -209,10 +200,6 @@ padding-bottom: 145px;
 	margin-top: 0px;
 	margin-bottom: 80px;
 	line-height: 32px;
-	text-align: center;
-}
-
-.early-access .center {
 	text-align: center;
 }
 
@@ -325,4 +312,70 @@ padding-bottom: 145px;
 --------------------------------------------------*/
 .img-responsive {
     margin: 0 auto;
+}
+
+/* TITLE
+--------------------------------------------------*/
+.title {
+	height: 560px;
+	padding-top: 230px;
+}
+
+.title h1 {
+	font-size: 80px;
+	font-weight: 700;
+}
+
+.title p {
+	font-size: 32px;
+	font-weight: 400;
+	font-style: italic;
+	text-align: center;
+	
+}
+
+/* SPACER LINE
+--------------------------------------------------*/
+.spacer .line {
+	height: 1px;
+	width: 100%;
+	background-color: #dfdfdf;
+	margin-bottom: 120px;
+}
+
+/* VISION
+--------------------------------------------------*/
+.vision p {
+	line-height: 32px;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 65px;
+}
+
+.vision h2 {
+	margin-bottom: 40px;
+}
+
+.vision .vision-text p {
+	text-align: left;
+	margin-bottom: 70px;
+}
+
+.vision img {
+	margin-bottom: 145px;
+}
+
+/* GET IN TOUCH 
+--------------------------------------------------*/
+.get-in-touch {
+	margin-bottom: 145px;
+}
+.get-in-touch h2 {
+	margin-bottom: 40px;
+}
+.get-in-touch p {
+	line-height: 32px;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 70px;
 }

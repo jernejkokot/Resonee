@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>About | Resonee - Make ideas happen!</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+  
+  <body>
+	
+	<div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="row navbar">
+			<div class="col-xs-6 logo"><img  src="images/header-logo.png"></div>
+			<div class="col-xs-6 menu"> 
+				<a href="#" data-dismiss="modal"> Close <img src="images/x_black_white.jpg"></a>
+			</div>
+		</div>	
+		<div class="modal-menu">
+			<ul>
+				<a href="index.html"><li>Home</li></a>
+				<a href="how-it-works.html"><li>Process</li></a>
+				<a href="about.html"><li>About</li></a>
+				<a href="news.html"><li>News</li></a>
+				<a href="contact.html"><li>Contact</li></a>
+			</ul>
+		</div>
+	</div> <!-- /.modal -->
+	
+	<div class="navbar row">
+		<div class="col-xs-6 logo"><img src="images/header-logo.png"></div>
+		<div class="col-xs-6 menu"> 
+			<a href="#" id="menu-link"> Menu <img src="images/bars_black_white.jpg"></a>
+		</div>
+	</div>  <!-- /.navbar -->
+
+	<div class="title">
+		<div class="container">
+			<div class="row">				
+				<h1>We are.</h1>
+				<p>Two crazy guys.</p>
+			</div>
+		</div>
+	</div><!-- /.title --> 
+	
+	<div class="spacer">
+		<div class="container">
+			<div class="row">
+				<div class="line" />
+			</div>
+		</div>
+	</div>
+
+	<div class="vision">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<h2>Our vision</h2>
+					<p>Lorem ipsum dolor sit amet, auctor massa, amet id, blandit sit pretium facilisis non. Posuere mollis pretium urna. Id nulla, pede hendrerit diam sed feugiat velit nunc, vivamus iaculis venenatis, arcu in curabitur.</p>
+				</div>
+			</div>
+			<div class="row vision-text">
+				<div class="col-sm-5 col-sm-offset-1">
+					<p> Neque amet morbi in, non vestibulum congue varius nec ultrices maecenas, suspendisse dictum erat lorem fames. Non laoreet pharetra, pulvinar gravida maecenas cras varius eu, laoreet donec mauris id suscipit cursus nullam. Hac porta minima facilisi quis, mauris ullamcorper mattis cras metus tristique, amet sed purus consectetuer venenatis arcu amet. </p>
+				</div>
+				<div class="col-sm-5">
+					<p> Ac erat at, sit ultricies pede a felis praesent rhoncus in duis augue congue mauris, lectus nibh class nam pellentesque velit convallis, ultricies orci facilisi vitae sollicitudin gravida. Praesent nulla etiam magna, in orci, viverra maecenas laoreet ligula. Ligula mollis mollis, sit metus massa lectus, suspendisse phasellus fusce at, nonummy vel convallis quis ac augue. </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-10 col-sm-offset-1">
+					<img class="img-responsive" src="images/about-img.png">
+				</div>
+			</div>
+		</div>
+	</div><!-- /.vision -->
+	
+	<div class="get-in-touch">
+		<div class="container">
+			<div class="row">
+				<h2>Get in touch</h2>
+				<p>We'd be more than happy to answer any and all question you might have. <br />
+				Sometimes we answer really quickly, sometime it takes a little longer. <br />
+				Click Email Us and feel free to drop us an email. </p>
+				<div class="text-center"><a class="btn btn-lg" href="#" role="button">Email us</a></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="footer">
+		<div class="container">
+			<div class="footer-logo">
+				<img src="images/footer-logo.png">
+			</div>
+			<hr class="divider">
+			<div class="footer-text">	
+				<div class="row">
+					<div class="col-xs-6" id="copy">&copy; 2014 Resonee.</div>
+					<div class="col-xs-6" id="social">Twitter Facebook</div>
+				</div>
+			</div>
+		</div>
+	<div> <!-- /.footer -->
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script>
+		
+		$('#menu-link').click(function() {
+			$('#menuModal').modal('show');
+			$('.carousel').carousel('pause');
+		});
+		
+		$('#menuModal').on('hidden.bs.modal', function (e) {
+			$('#menu-link').css('visibility', 'visible');
+		})
+
+		$('#menuModal').on('show.bs.modal', function (e) {
+			$('#menu-link').css('visibility', 'hidden');
+		})
+
+	</script>
+  </body>
+</html>
