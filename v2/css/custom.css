@@ -85,13 +85,21 @@ h3 {
 }
 
 .modal-menu {
-	position: absolute;
+	
 	text-align: center;
 	font-size: 54px;
 	text-transform:uppercase;
 	font-weight: 600;
-	top: 28%;
+	height: 386px;
 	width: 100%;
+	
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
 }
 
 .modal-menu ul{
