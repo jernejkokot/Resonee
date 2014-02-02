@@ -86,7 +86,7 @@ h3 {
 
 .modal-menu {
 	text-align: center;
-	font-size: 22px;
+	font-size: 54px;
 	text-transform:uppercase;
 	font-weight: 600;
 }
@@ -97,12 +97,11 @@ h3 {
 }
 
 .modal-menu li {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	
 }
 
 .modal-menu li:hover{
-	background: black;
+	background: #1c1c1c;
 	color: #FFF;	
 }
 
@@ -113,7 +112,7 @@ h3 {
 
 .modal-menu a:hover {
 	text-decoration: none;
-	color: #FFF;
+	color: #1c1c1c;
 }
 
 
@@ -250,7 +249,7 @@ padding-bottom: 145px;
 .carousel-caption {
   z-index: 10;
   text-shadow: none;
-  top: 25%;
+  top: 34%;
 
 }
 
