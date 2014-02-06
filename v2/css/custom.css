@@ -429,3 +429,37 @@ h3 {
 	text-decoration: none;
 	font-weight: 600;
 }
+
+/* NEWS DETAIL
+-------------------------------------------*/
+.news-detail {
+	margin-bottom: 125px;
+}
+
+.news-detail img {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.news-detail p {
+	font-size: 18px;
+	line-height: 32px;
+	margin-bottom: 60px;
+	color: #555;
+}
+
+.news-detail a, .news-detail a:hover {
+	color: white;
+	text-decoration: none;
+	font-weight: 600;
+}
+.comments {
+	margin-top: 50px;
+	text-align: center;
+}
+.news-detail .btn-lg {
+	color: white;
+	width: auto;
+	height: 38px;
+	margin: 15px;
+}
