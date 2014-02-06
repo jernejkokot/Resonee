@@ -336,7 +336,12 @@ h3 {
 
 /* SPACER LINE
 --------------------------------------------------*/
+.spacer {
+	padding-left: 60px;
+	padding-right: 60px;
+}
 .line {
+
 	height: 1px;
 	width: 100%;
 	background-color: #dfdfdf;
