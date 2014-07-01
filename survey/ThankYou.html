@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Load jQuery from CloudFlare’s CDN. -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- Load Sheetrock from the local environment. -->
+<script src="http://chriszarate.github.io/sheetrock/src/jquery.sheetrock.min.js"></script>
+<script>
+var mySpreadsheet = 'https://docs.google.com/spreadsheet/ccc?key=0AlRp2ieP7izLdGFNOERTZW0xLVpROFc3X3FJQ2tSb2c#gid=0';
+$(window).load(function(){
+$('#statistics').sheetrock({
+  url: mySpreadsheet
+});
+});
+</script>
+
+</head>
+<body>
+<table id="statistics" class="table"></table>
+</body>
+</html> 

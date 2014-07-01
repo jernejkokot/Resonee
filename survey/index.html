@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        function postContactToGoogle() {
+            var Problem = $('#Problem').val();
+
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/1l9Y8p3uIb-t68fd4hMXpz3i6P1wbPu6LlvosWI5Imio/formResponse",
+                    data: { 
+                    "entry_1473056309": Problem },
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function () {
+                            window.location.replace("ThankYou.html");
+                        },
+                        200: function () {
+                            window.location.replace("ThankYou.html");
+                        }
+                    }
+                });
+        }
+    </script>
+</head>
+<body>
+<input id="Problem" name="Problem" type="text"  placeholder="Problem">
+<button id="ButtonSubmit" onclick="postContactToGoogle()" type="button" >Send</button> 
+</body>
+</html> 
