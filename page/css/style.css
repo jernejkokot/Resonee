@@ -1,0 +1,42 @@
+.layout {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    width: 360px;
+    margin-left: -180px;
+
+}
+
+
+.logo {
+	background-image: url(../img/logo.png);
+	width: 90px;
+	height: 16px;
+	margin: 0 auto;
+}
+
+
+
+.text{
+	color: #333333;
+	font-family: "Myriad Pro";
+	font-weight: 100;
+	font-size: 16px;
+	line-height: 22px;
+	text-decoration: none;	
+	text-align: center;    
+	margin-top: 40px;
+}
+
+
+a {
+	color: #33a9db;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #228bb8;
+	text-decoration: none;
+}
+
+
