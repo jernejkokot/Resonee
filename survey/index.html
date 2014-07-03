@@ -1,31 +1,371 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-        function postContactToGoogle() {
-            var Problem = $('#Problem').val();
-
-                $.ajax({
-                    url: "https://docs.google.com/forms/d/1l9Y8p3uIb-t68fd4hMXpz3i6P1wbPu6LlvosWI5Imio/formResponse",
-                    data: { 
-                    "entry_1473056309": Problem },
-                    type: "POST",
-                    dataType: "xml",
-                    statusCode: {
-                        0: function () {
-                            window.location.replace("ThankYou.html");
-                        },
-                        200: function () {
-                            window.location.replace("ThankYou.html");
-                        }
-                    }
-                });
-        }
-    </script>
+    <title>Problem gathering survey</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Resonee - searching for new opportunities">
+    <meta name="author" content="Resonee Team">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/script.js"></script>
+    <script type="text/javascript" src="//use.typekit.net/rft0vdu.js"></script>
+    <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
 </head>
 <body>
-<input id="Problem" name="Problem" type="text"  placeholder="Problem">
-<button id="ButtonSubmit" onclick="postContactToGoogle()" type="button" >Send</button> 
+    <div class="pt-perspective">
+        <div class="pt-page pt-page-current" id="c1">
+            <div class="container">
+                <div class="row text-right" hidden>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-link btn-xs active">
+                            <input type="radio" name="Language" id="English" value="English" checked> English
+                        </label>
+                        <label class="btn btn-link btn-xs">
+                            <input type="radio" name="Language" id="Deutsch" value="Deutsch"> Deutsch
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1>Hello!</h1>
+                    <p>
+                        We’re looking to gather some feedback for developing a new product <br />
+                        and would like to see what would actually help you do your daily activities better.
+                    </p>
+                    <p>
+                        If you are interested, please answer 2 super short questions.<br />
+                        Thanks you for your time and interest.
+                    </p>
+                    <button type="button" class="btn next" id="c1_btn_start">Answer now</button>
+                </div>
+            </div>
+        </div>
+        <div class="pt-page" id="c2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 id="Question"></h1>
+                        <p>Describe your problem in the box below.</p>
+                    </div>
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <textarea class="form-control" rows="4" id="Answer"></textarea>
+                    </div>
+                    <div class="col-xs-12">
+                        <button type="button" class="btn next" id="c2_btn_next">Continiue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pt-page" id="c4">
+            <div class="container">
+                <div class="row">
+                    <h1>Would you tell us more about you?</h1>
+                    <p>It would help us make the product even better.</p>
+                </div>
+
+                <div class="person">
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <p>GENDER</p>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="btn-toolbar" data-toggle="buttons">
+                                <label class="btn btn-radio">
+                                    <input type="radio" name="Gender" id="Male" value="Male"> Male
+                                </label>
+                                <label class="btn btn-radio">
+                                    <input type="radio" name="Gender" id="Female" value="Female"> Female
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <p>AGE</p>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="btn-toolbar" data-toggle="buttons">
+                                <label class="btn btn-radio">
+                                    <input type="radio" name="Age" id="Age_0_14" value="0-14"> 0 - 14
+                                </label>
+                                <label class="btn btn-radio">
+                                    <input type="radio" name="Age" id="Age_15_29" value="14-29"> 14 - 29
+                                </label>
+                                <label class="btn btn-radio">
+                                    <input type="radio" name="Age" id="Age_30_44" value="30-44"> 30 - 44
+                                </label>
+                                <label class="btn btn-radio">
+                                    <input type="radio" name="Age" id="Age_45_60" value="45-60"> 45 - 60
+                                </label>
+                                <label class="btn btn-radio">
+                                    <input type="radio" name="Age" id="Age_60plus" value="60+"> 60+
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <p>LOCATION</p>
+                        </div>
+                        <div class="col-sm-8">
+                            <select id="Location">
+                                <option>Select country...</option>
+                                <option>Afghanistan</option>
+                                <option>Albania</option>
+                                <option>Algeria</option>
+                                <option>Andorra</option>
+                                <option>Angola</option>
+                                <option>Antigua and Barbuda</option>
+                                <option>Argentina</option>
+                                <option>Armenia</option>
+                                <option>Aruba</option>
+                                <option>Australia</option>
+                                <option>Austria</option>
+                                <option>Azerbaijan</option>
+                                <option>Bahamas</option>
+                                <option>Bahrain</option>
+                                <option>Bangladesh</option>
+                                <option>Barbados</option>
+                                <option>Belarus</option>
+                                <option>Belgium</option>
+                                <option>Belize</option>
+                                <option>Benin</option>
+                                <option>Bhutan</option>
+                                <option>Bolivia</option>
+                                <option>Bosnia and Herzegovina</option>
+                                <option>Botswana</option>
+                                <option>Brazil</option>
+                                <option>Brunei </option>
+                                <option>Bulgaria</option>
+                                <option>Burkina Faso</option>
+                                <option>Burma</option>
+                                <option>Burundi</option>
+                                <option>Cambodia</option>
+                                <option>Cameroon</option>
+                                <option>Canada</option>
+                                <option>Cape Verde</option>
+                                <option>Central African Republic</option>
+                                <option>Chad</option>
+                                <option>Chile</option>
+                                <option>China</option>
+                                <option>Colombia</option>
+                                <option>Comoros</option>
+                                <option>Congo</option>
+                                <option>Costa Rica</option>
+                                <option>Cote d'Ivoire</option>
+                                <option>Croatia</option>
+                                <option>Cuba</option>
+                                <option>Curacao</option>
+                                <option>Cyprus</option>
+                                <option>Czech Republic</option>
+                                <option>Denmark</option>
+                                <option>Djibouti</option>
+                                <option>Dominica</option>
+                                <option>Dominican Republic</option>
+                                <option>East Timor</option>
+                                <option>Ecuador</option>
+                                <option>Egypt</option>
+                                <option>El Salvador</option>
+                                <option>Equatorial Guinea</option>
+                                <option>Eritrea</option>
+                                <option>Estonia</option>
+                                <option>Ethiopia</option>
+                                <option>Fiji</option>
+                                <option>Finland</option>
+                                <option>France</option>
+                                <option>Gabon</option>
+                                <option>Gambia</option>
+                                <option>Georgia</option>
+                                <option>Germany</option>
+                                <option>Ghana</option>
+                                <option>Greece</option>
+                                <option>Grenada</option>
+                                <option>Guatemala</option>
+                                <option>Guinea</option>
+                                <option>Guinea-Bissau</option>
+                                <option>Guyana</option>
+                                <option>Haiti</option>
+                                <option>Holy See</option>
+                                <option>Honduras</option>
+                                <option>Hong Kong</option>
+                                <option>Hungary</option>
+                                <option>Iceland</option>
+                                <option>India</option>
+                                <option>Indonesia</option>
+                                <option>Iran</option>
+                                <option>Iraq</option>
+                                <option>Ireland</option>
+                                <option>Israel</option>
+                                <option>Italy</option>
+                                <option>Jamaica</option>
+                                <option>Japan</option>
+                                <option>Jordan</option>
+                                <option>Kazakhstan</option>
+                                <option>Kenya</option>
+                                <option>Kiribati</option>
+                                <option>Korea North</option>
+                                <option>Korea South</option>
+                                <option>Kosovo</option>
+                                <option>Kuwait</option>
+                                <option>Kyrgyzstan</option>
+                                <option>Laos</option>
+                                <option>Latvia</option>
+                                <option>Lebanon</option>
+                                <option>Lesotho</option>
+                                <option>Liberia</option>
+                                <option>Libya</option>
+                                <option>Liechtenstein</option>
+                                <option>Lithuania</option>
+                                <option>Luxembourg</option>
+                                <option>Macau</option>
+                                <option>Macedonia</option>
+                                <option>Madagascar</option>
+                                <option>Malawi</option>
+                                <option>Malaysia</option>
+                                <option>Maldives</option>
+                                <option>Mali</option>
+                                <option>Malta</option>
+                                <option>Marshall Islands</option>
+                                <option>Mauritania</option>
+                                <option>Mauritius</option>
+                                <option>Mexico</option>
+                                <option>Micronesia</option>
+                                <option>Moldova</option>
+                                <option>Monaco</option>
+                                <option>Mongolia</option>
+                                <option>Montenegro</option>
+                                <option>Morocco</option>
+                                <option>Mozambique </option>
+                                <option>Namibia</option>
+                                <option>Nauru</option>
+                                <option>Nepal</option>
+                                <option>Netherlands</option>
+                                <option>Netherlands Antilles</option>
+                                <option>New Zealand</option>
+                                <option>Nicaragua</option>
+                                <option>Niger</option>
+                                <option>Nigeria</option>
+                                <option>North Korea</option>
+                                <option>Norway</option>
+                                <option>Oman</option>
+                                <option>Pakistan</option>
+                                <option>Palau</option>
+                                <option>Palestinian Territories</option>
+                                <option>Panama</option>
+                                <option>Papua New Guinea</option>
+                                <option>Paraguay</option>
+                                <option>Peru</option>
+                                <option>Philippines</option>
+                                <option>Poland</option>
+                                <option>Portugal </option>
+                                <option>Qatar </option>
+                                <option>Romania</option>
+                                <option>Russia</option>
+                                <option>Rwanda</option>
+                                <option>Saint Kitts and Nevis</option>
+                                <option>Saint Lucia</option>
+                                <option>Saint Vincent and the Grenadines</option>
+                                <option>Samoa </option>
+                                <option>San Marino</option>
+                                <option>Sao Tome and Principe</option>
+                                <option>Saudi Arabia</option>
+                                <option>Senegal</option>
+                                <option>Serbia</option>
+                                <option>Seychelles</option>
+                                <option>Sierra Leone</option>
+                                <option>Singapore</option>
+                                <option>Sint Maarten</option>
+                                <option>Slovakia</option>
+                                <option>Slovenia</option>
+                                <option>Solomon Islands</option>
+                                <option>Somalia</option>
+                                <option>South Africa</option>
+                                <option>South Korea</option>
+                                <option>South Sudan</option>
+                                <option>Spain </option>
+                                <option>Sri Lanka</option>
+                                <option>Sudan</option>
+                                <option>Suriname</option>
+                                <option>Swaziland </option>
+                                <option>Sweden</option>
+                                <option>Switzerland</option>
+                                <option>Syria</option>
+                                <option>Taiwan</option>
+                                <option>Tajikistan</option>
+                                <option>Tanzania</option>
+                                <option>Thailand </option>
+                                <option>Timor-Leste</option>
+                                <option>Togo</option>
+                                <option>Tonga</option>
+                                <option>Trinidad and Tobago</option>
+                                <option>Tunisia</option>
+                                <option>Turkey</option>
+                                <option>Turkmenistan</option>
+                                <option>Tuvalu </option>
+                                <option>Uganda</option>
+                                <option>Ukraine</option>
+                                <option>United Arab Emirates</option>
+                                <option>United Kingdom</option>
+                                <option>Uruguay</option>
+                                <option>Uzbekistan</option>
+                                <option>Vanuatu</option>
+                                <option>Venezuela</option>
+                                <option>Vietnam</option>
+                                <option>Yemen</option>
+                                <option>Zambia</option>
+                                <option>Zimbabwe</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button onclick="postContactToGoogle()" type="button" class="btn next" id="ButtonSubmit1">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="pt-page" id="c5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Thank you for your help!</h1>
+                        <p>We appreaciate taking you time to participate in this short survey.</p>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <p>
+                            If you would like to stay updated, just send us your email.
+                        </p>
+                    </div>
+
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Email address" id="Email">
+                            <span class="input-group-btn">
+                                <button class="btn" type="button" id="c5_btn_mail">Send</button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div id="c5_text_tnx" hidden>
+                            <br />
+                            <p>We’re excited to share with you what we have coming and hope to make it even better with your feedback.</p>
+                        </div>
+                        <div id="c5_text_error" hidden>
+                            <br />
+                            <p style="color:red;">You must enter a valid email adress.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-</html> 
+</html>
