@@ -84,7 +84,7 @@ p {
     border: solid 1px #c2c5c9;
 }
 
-.btn-radio:active, .btn-radio:focus, .btn-radio:hover, .btn-radio:visited, .btn-radio.active {
+.btn-radio:focus, .btn-radio:hover, .btn-radio:visited, .btn-radio.active {
      color: #ffffff;  
      background-color: #afb2b5;
      box-shadow: none;
