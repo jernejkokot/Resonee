@@ -93,8 +93,6 @@ $(function () {
         }
     })
 
-    //
-    
 });
 
 function isValidEmailAddress(emailAddress) {
@@ -130,7 +128,7 @@ function getQuestion()
     return result;
 }
 
-function getQuestionParameter(questionParameter) {
+function getQuestionId(questionParameter) {
     var result;
     try {
         switch (switch_on) {
