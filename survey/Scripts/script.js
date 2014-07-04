@@ -3,6 +3,7 @@
 function postContactToGoogle() {
     var Language = $('input[name="Language"]:checked').val();
     var Question = $('#Question').text();
+    var QuestionId = getUrlParameter("q");
     var Answer = $('#Answer').val();
     var Age = $('input[name="Age"]:checked').val();
     var Gender = $('input[name="Gender"]:checked').val();
@@ -15,6 +16,7 @@ function postContactToGoogle() {
         url: "https://docs.google.com/forms/d/1R-b5cSkLV9zK4i8P5qyI3Mj9xyjTV0tUS1LLC04xbTw/formResponse",
         data: {
             "entry_1203314722": Language,
+            "entry_131733371": QuestionId,
             "entry_131733371": Question,
             "entry_641039761": Answer,
             "entry_14591124": Age,
@@ -22,6 +24,7 @@ function postContactToGoogle() {
             "entry_2062063561": Location,
             "entry_185113739": Occupation,
             "entry_950247682": Email
+            
         },
         type: "POST",
         dataType: "xml",
@@ -114,7 +117,7 @@ function getQuestion()
         var questionId = getUrlParameter("q");
         var question = getQuestion(languageId, questionId);
 
-        var questions = []; // double array
+        var questions = []; // double value array
 
         questions[0] = ["Was ist dein größtes Problem, wenn du in eine Website Hacken wilst?", "What is your biggest problem when you're hacking a website?"];
         questions[1] = ["Vprasanje 1 - DEU", "Vprasanje 1 - ANG"];
