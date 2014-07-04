@@ -6,7 +6,6 @@
     var Age = $('input[name="Age"]:checked').val();
     var Gender = $('input[name="Gender"]:checked').val();
     var Location = $('#Location').val();
-    var Occupation = $('input[name="Occupation"]:checked').val(); // work status
     var Email = $('#Email').val();
     var LastPage = $('#c5').hasClass('pt-page-current');
 
@@ -14,13 +13,12 @@
         url: "https://docs.google.com/forms/d/1R-b5cSkLV9zK4i8P5qyI3Mj9xyjTV0tUS1LLC04xbTw/formResponse",
         data: {
             "entry_1203314722": Language,
-            "entry_131733371": QuestionId,
+            "entry_185113739": QuestionId,
             "entry_131733371": Question,
             "entry_641039761": Answer,
             "entry_14591124": Age,
             "entry_336794213": Gender,
             "entry_2062063561": Location,
-            "entry_185113739": Occupation,
             "entry_950247682": Email
             
         },
@@ -124,10 +122,10 @@ function getQuestion()
 
         if (questionId >= 0 && questionId < questions.length) {
             return questions[questionId][languageId];
-        }
+        } 
         
     } catch (e) {
-        return questions[0][0]; 
+        return "What is your biggest problem when you're hacking a website?";
     }
     return result;
 }
