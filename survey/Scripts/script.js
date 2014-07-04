@@ -1,9 +1,7 @@
-﻿var NUM_LANGUAGES = 2;
-
-function postContactToGoogle() {
+﻿function postContactToGoogle() {
     var Language = $('input[name="Language"]:checked').val();
     var Question = $('#Question').text();
-    var QuestionId = getUrlParameter("q");
+    var QuestionId = getQuestionId(getUrlParameter("q"));
     var Answer = $('#Answer').val();
     var Age = $('input[name="Age"]:checked').val();
     var Gender = $('input[name="Gender"]:checked').val();
@@ -112,7 +110,8 @@ function getQuestion()
 
         var language = $('input[name=Language]:checked').val();
         var languageId = getLanguageId(language);
-        var questionId = getUrlParameter("q");
+        var questionParameter = getUrlParameter("q");
+        var questionId = getQuestionId(questionParameter);
         var question = getQuestion(languageId, questionId);
 
         var questions = []; // double value array
@@ -122,19 +121,32 @@ function getQuestion()
         questions[2] = ["Vprasanje 2 - DEU", "Vprasanje 2 - ANG"];
 
         if (questionId >= 0 && questionId < questions.length) {
-            if (languageId >= 0 && languageId < NUM_LANGUAGES) {
-                return questions[questionId][languageId];
-            }
+            return questions[questionId][languageId];
         }
-        else {
-            if (languageId >= 0 && languageId < NUM_LANGUAGES) {
-                return questions[0][languageId];
-            }
-        }
+        
     } catch (e) {
-        if (languageId >= 0 && languageId < NUM_LANGUAGES) {
-            return questions[0][languageId]; 
+        return questions[0][0]; 
+    }
+    return result;
+}
+
+function getQuestionParameter(questionParameter) {
+    var result;
+    try {
+        switch (switch_on) {
+            case "1":
+                result = 1;
+                break;
+            case "2":
+                result = 2;
+                break;
+            default:
+                result = 0;
+                break;
         }
+
+    } catch (e) {
+        result = 0;
     }
     return result;
 }
