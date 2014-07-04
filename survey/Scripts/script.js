@@ -139,7 +139,7 @@ function getQuestion()
 }
 
 function getLanguageId(language) {
-    var result = 1;
+    var result;
     try {
         switch (language) {
             case "Deutsch":
@@ -148,9 +148,12 @@ function getLanguageId(language) {
             case "English":
                 result = 1;
                 break;
+			default:
+				result = 1;
+				break;
         }
     } catch (e) {
-
+		result = 1;
     }
     return result;
 }
