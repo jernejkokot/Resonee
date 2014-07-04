@@ -132,10 +132,10 @@ function getQuestionId(questionParameter) {
     var result;
     try {
         switch (switch_on) {
-            case "1":
+            case 1:
                 result = 1;
                 break;
-            case "2":
+            case 2:
                 result = 2;
                 break;
             default:
