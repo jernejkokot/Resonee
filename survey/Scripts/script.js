@@ -110,7 +110,6 @@ function getQuestion()
         var languageId = getLanguageId(language);
         var questionParameter = getUrlParameter("q");
         var questionId = getQuestionId(questionParameter);
-        var question = getQuestion(languageId, questionId);
 
         var questions = []; // double value array
 
@@ -131,11 +130,11 @@ function getQuestion()
 function getQuestionId(questionParameter) {
     var result;
     try {
-        switch (switch_on) {
-            case 1:
+        switch (questionParameter) {
+            case "1":
                 result = 1;
                 break;
-            case 2:
+            case "2":
                 result = 2;
                 break;
             default:
