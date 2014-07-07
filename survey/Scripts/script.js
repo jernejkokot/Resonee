@@ -67,6 +67,7 @@ function postCompleted() {
     if (LastPageC5 == true || LastPageC6 == true) {
         if (LastPageC5 == true)
         {
+            $('#c5_div_emailText').hide();
             $('#c5_div_email').hide();
             $('#c5_div_emailSend').hide();
             $('#c5_div_tnx').show();
