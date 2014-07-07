@@ -30,15 +30,54 @@
                     </div>
                 </div>
                 <div class="row">
-                    <h1>Hello!</h1>
-                    <p>
-                        We’re looking to gather some feedback for developing a new product <br />
-                        and would like to see what would actually help you do your daily activities better.
-                    </p>
-                    <p>
-                        If you are interested, please answer 2 super short questions.<br />
-                        Thanks you for your time and interest.
-                    </p>
+                    <div class="col-sm-12">
+                        <h1>
+                            Selecting the area of interest
+                        </h1>
+                        <p>
+                            We’re looking to gather some feedback for developing a new product <br />
+                            and would like to ask you 2 super short questions. 
+                            <br />
+                            <br />
+                        </p>
+
+                    </div>
+
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="btn-toolbar" data-toggle="buttons">
+                            <label class="btn btn-radio active" id="c1_radio_cooking">
+                                <input type="radio" name="Interests" value="1" checked>
+                            </label>
+                            <label class="btn btn-radio" id="c1_radio_jobSearching">
+                                <input type="radio" name="Interests" value="2">
+                            </label>
+                            <label class="btn btn-radio" id="c1_radio_appDevelopment">
+                                <input type="radio" name="Interests" value="3">
+                            </label>
+                            <label class="btn btn-radio" id="c1_radio_mobileApps">
+                                <input type="radio" name="Interests" value="4">
+                            </label>
+                            <label class="btn btn-radio" id="c1_radio_messaging">
+                                <input type="radio" name="Interests" value="5">
+                            </label>
+                            <label class="btn btn-radio" id="c1_radio_surveys">
+                                <input type="radio" name="Interests" value="6">
+                            </label>
+                            <label class="btn btn-radio" id="c1_radio_email">
+                                <input type="radio" name="Interests" value="7">
+                            </label>
+                            <label class="btn btn-radio" id="c1_radio_subscriptions">
+                                <input type="radio" name="Interests" value="8">
+                            </label>
+                            <label class="btn btn-radio" id="c1_radio_lifeStyle">
+                                <input type="radio" name="Interests" value="9">
+                            </label>
+                            <label class="btn btn-radio" id="c1_radio_random">
+                                <input type="radio" name="Interests" value="10">
+                            </label>
+                        </div>
+                    </div>
+
                     <button type="button" class="btn next" id="c1_btn_start">Answer now</button>
                     <noscript>Please enable Javascript to see the survey.</noscript>
                 </div>
@@ -344,43 +383,102 @@
                             If you would like to stay updated, just send us your email.
                         </p>
                     </div>
-
+                </div>
+                <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Email address" id="Email">
-                            <span class="input-group-btn">
-                                <button class="btn" type="button" id="c5_btn_mail">Send</button>
-                            </span>
+                        <div class="form-group text-left" id="c5_div_email">
+                            <label for="c5_input_email">Your email address</label>
+                            <input type="text" class="form-control" placeholder="Enter email" id="c5_input_email">
                         </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div id="c5_text_tnx" hidden>
-                            <br />
-                            <p style="color:#33a9db">We’re excited to share with you what we have coming and hope to make it even better with your feedback.</p>
-                        </div>
-                        <div id="c5_text_error" hidden>
+                        <div id="c5_div_error" hidden>
                             <br />
                             <p style="color:red;">You must enter a valid email adress.</p>
                         </div>
+                        <div id="c5_div_emailSend">
+                            <button class="btn next" type="button" id="c5_btn_emailSend">Send</button>
+                        </div>
                     </div>
-                    
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" id="c5_div_tnx" hidden>
+                        <br />
+                        <p style="color:#33a9db">We’re excited to share with you what we have coming and hope to make it even better with your feedback.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-page" id="c6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Thank you for your help!</h1>
+                        <p>We appreaciate taking you time to participate in this short survey.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p>We’re excited to share with you what we have coming and hope to make it even better with your feedback.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="btn next" type="button" id="c6_btn_stayUpdated">Stay updated</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="border-left: solid 1px #b9b6b6;">
+                        <div class="col-xs-12">
+                            <p>We’re excited to share with you what we have coming and hope to make it even better with your feedback.</p>
+                        </div>
+                        <div class="col-xs-12">
+                            <button class="btn next" type="button" id="c6_btn_share">Share</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="form-group text-left" id="c6_div_email" hidden>
+                            <label for="c6_input_email">Your email address</label>
+                            <input type="text" class="form-control" placeholder="Enter email" id="c6_input_email">
+                        </div>
+                        <div class="form-group text-left" id="c6_div_emailFriend" hidden>
+                            <label for="c6_input_emailFriend">Your friends email address</label>
+                            <input type="text" class="form-control" placeholder="Enter email" id="c6_input_emailFriend">
+                        </div>
+                        <div id="c6_div_error" hidden>
+                            <br />
+                            <p style="color:red;">You must enter a valid email adress.</p>
+                        </div>
+                        <div id="c6_div_emailSend" hidden>
+                            <button class="btn next" type="button" id="c6_btn_emailSend">Send</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" id="c6_div_tnx" hidden>
+                        <br />
+                        <p style="color:#33a9db">We’re excited to share with you what we have coming and hope to make it even better with your feedback.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-	
-	<script type="text/javascript">
 
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-46902651-1']);
-	  _gaq.push(['_trackPageview']);
+    <script type="text/javascript">
 
-	  (function() {
-		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-46902651-1']);
+        _gaq.push(['_trackPageview']);
 
-	</script>
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
 </body>
 </html>
