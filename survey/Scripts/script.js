@@ -87,11 +87,19 @@ function postCompleted() {
         { 
             $('#c4').removeClass('pt-page-current');
             $('#c5').addClass('pt-page-current');
+
+            $('html, body').animate({
+                scrollTop: $("#c5").offset().top
+            }, 0);
         }
         else if (randomFinalPage == 6)
         {
             $('#c4').removeClass('pt-page-current');
             $('#c6').addClass('pt-page-current');
+
+            $('html, body').animate({
+                scrollTop: $("#c6").offset().top
+            }, 0);
         }
     }
 }
@@ -138,12 +146,23 @@ $(function () {
 
         $('#c1').removeClass('pt-page-current');
         $('#c2').addClass('pt-page-current');
+        
+        $('html, body').animate({
+            scrollTop: $("#c2").offset().top
+        }, 0);
+
     })
 
     $('#c2_btn_next').click(function () {
         $('#c2').removeClass('pt-page-current');
         $('#c4').addClass('pt-page-current');
+
+        $('html, body').animate({
+            scrollTop: $("#c4").offset().top
+        }, 0);
     })
+
+
 
     $('#c5_btn_emailSend').click(function () {
         var isValidEmail = isValidEmailAddress($('#c5_input_email').val());
