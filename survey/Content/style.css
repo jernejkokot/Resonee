@@ -200,7 +200,6 @@ p {
    margin-top: 40px;
 }
 
-
 .person > .row {
     border-bottom: 1px solid #eeeeee;
     line-height: 100px;   
@@ -213,7 +212,6 @@ p {
     border: solid 1px red;
 }
 
-
 #c3 {
    
 }
@@ -224,8 +222,6 @@ p {
     border: solid 1px #94a7b4;
     padding-left: 5px;
 }
-
-
 
 #c5 .input-group {
     margin-top: 20px;
@@ -280,12 +276,12 @@ p {
     #c5_btn_mail {
     width: auto;
     }
+
+    .next {
+        margin-top: 35px;
+        margin-bottom: 30px;
+    }
 }
-
-@media (min-width: 1200px) {
-
-}
-
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #aaaaaa;
