@@ -147,6 +147,8 @@ $(function () {
         $('#c1').removeClass('pt-page-current');
         $('#c2').addClass('pt-page-current');
         
+        $('#Answer').text('');
+
         $('html, body').animate({
             scrollTop: $("#c2").offset().top
         }, 0);
