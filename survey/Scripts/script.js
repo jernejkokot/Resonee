@@ -304,7 +304,7 @@ function getQuestion()
         var questions = []; // double value array
 
         questions[0] = ["Was ist dein größtes Problem, wenn du in eine Website Hacken wilst?", "What is your biggest problem when you're hacking a website?"];
-        questions[1] = ["DEU 1", "Would you order a homemade meal or cook it for somebody else, why?"];
+        questions[1] = ["DEU 1", "Would you order a homecooked meal or cook it for somebody else, why?"];
         questions[2] = ["DEU 2", "What is your biggest problem when you're searching for a job?"];
         questions[3] = ["DEU 3", "What is your biggest problem when you're developing a new software idea?"];
         questions[4] = ["DEU 4", "What is your biggest problem when you are using mobile applications?"];
