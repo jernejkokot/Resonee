@@ -339,7 +339,7 @@ input:-ms-input-placeholder.form-control {
 @media all and (max-width:768px) {
 
     .c0 {
-          margin: 20px 20px 0px 20px;
+          margin: 0px 0px 0px 0px;
     }
 
     .c0 .logo {
@@ -351,9 +351,9 @@ input:-ms-input-placeholder.form-control {
     }
 
     .c0 h1 {
-           font-size: 54px;
-           line-height: 54px;
-           padding-top: 140px;
+           font-size: 50px;
+           line-height: 50px;
+           padding-top: 100px;
     }
 
     .c0 p {
@@ -386,6 +386,10 @@ input:-ms-input-placeholder.form-control {
 
     .btn, .c0 .btn  {
         margin-top: 30px;
+        font-weight: 700;
+        height: 40px;
+        width: 140px;
+        font-size: 14px;
     }
 
     .carousel .item {
