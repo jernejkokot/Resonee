@@ -181,7 +181,7 @@ input:-ms-input-placeholder.form-control {
 /* C1                       */
 #c1_item1 {
     background-position: center center;
-    background-image: url('/Content/img/header.jpg');
+    background-image: url('img/header.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -189,7 +189,7 @@ input:-ms-input-placeholder.form-control {
 
 #c1_item2 {
     background-position: center center;
-    background-image: url('/Content/img/header2.jpg');
+    background-image: url('img/header2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -197,14 +197,14 @@ input:-ms-input-placeholder.form-control {
 
 #c1_item3 {
     background-position: center center;
-    background-image: url('/Content/img/header.jpg');
+    background-image: url('img/header.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #c1_item4 {
     background-position: center center;
-    background-image: url('/Content/img/header2.jpg');
+    background-image: url('img/header2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
