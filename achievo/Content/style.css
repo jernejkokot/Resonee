@@ -184,7 +184,7 @@ input:-ms-input-placeholder.form-control {
 /*-------------------------- */
 /* C1                       */
 #c1_item1 {
-    background-position: center center;
+    background-position: center right;
     background-image: url('img/header1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -192,7 +192,7 @@ input:-ms-input-placeholder.form-control {
 
 
 #c1_item2 {
-    background-position: center center;
+    background-position: center right;
     background-image: url('img/header2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -207,7 +207,7 @@ input:-ms-input-placeholder.form-control {
 }
 
 #c1_item4 {
-    background-position: center center;
+    background-position: center left;
     background-image: url('img/header4.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -355,7 +355,7 @@ input:-ms-input-placeholder.form-control {
     .c0 h1 {
            font-size: 50px;
            line-height: 50px;
-           padding-top: 100px;
+           padding-top: 140px;
     }
 
     .c0 p {
@@ -372,7 +372,7 @@ input:-ms-input-placeholder.form-control {
         margin-top: 80px;
         margin-bottom: 30px;
     }
-
+    
     p, .c1 p, .c2 p, .c3 p, .c4 p, .c5 p, .c6 p, .c7 p {
         text-align: center;
         margin-bottom: 35px;
@@ -395,7 +395,11 @@ input:-ms-input-placeholder.form-control {
     }
 
     .carousel .item {
-      height: 510px;
+      height: 460px;
+    }
+
+    .btn {
+        visibility: hidden;
     }
 }
 
