@@ -58,13 +58,20 @@ input:-ms-input-placeholder.form-control {
     height: 50px;
     color: #ffffff;
     width: 200px;
-    background-color: #EF4E38;
+    background-color: #ff5649;
     border-radius: 2pt;
     text-transform: uppercase;
     font-size: 18px;
     letter-spacing: 0.02em;
     font-style: normal;
 }
+
+.btn:hover, .btn:focus, .btn:active, .btn:visited {
+    background-color: #e5493d;
+    color: #ffffff;
+    box-shadow: none;
+}
+
 
 #circle_1 {
     background: #DDDDDD;
