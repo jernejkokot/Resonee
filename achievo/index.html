@@ -36,13 +36,13 @@
         </div> 
     </div>
     <div class="c1">
-        <div id="carousel-achievo" class="carousel slide" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li data-target="#carousel-achievo" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-achievo" data-slide-to="1"></li>
-                <li data-target="#carousel-achievo" data-slide-to="2"></li>
-                <li data-target="#carousel-achievo" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-10 col-xs-offset-1">
                     <img src="Content/img/your_goal.png" class="img-responsive center-block" />
                 </div>
             </div>
@@ -157,8 +157,8 @@
                         Quam lacus aenean risus, urna ut praesent pede. Etiam sed, velit pede pellentesque eu dolor et rhoncus, in ridiculus at.
                     </p>
                 </div>
-                <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1 text-center">
-                    <img src="Content/img/mentor.png" class="img-responsive" />
+                <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1">
+                    <img src="Content/img/mentor.png" class="img-responsive center-block" />
                 </div>
             </div>
         </div>
@@ -212,8 +212,18 @@
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="Scripts/jquery-1.9.1.min.js"></script>
-
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/jquery.mobile.custom.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".carousel-inner").swiperight(function () {
+                $(this).parent().carousel('prev');
+            });
+            $(".carousel-inner").swipeleft(function () {
+                $(this).parent().carousel('next');
+            });
+        });
+    </script>
+
 </body>
 </html>
