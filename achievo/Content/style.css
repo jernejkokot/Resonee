@@ -184,7 +184,7 @@ input:-ms-input-placeholder.form-control {
 /*-------------------------- */
 /* C1                       */
 #c1_item1 {
-    background-position: center right;
+    background-position: center center;
     background-image: url('img/header1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -192,7 +192,7 @@ input:-ms-input-placeholder.form-control {
 
 
 #c1_item2 {
-    background-position: center right;
+    background-position: center center;
     background-image: url('img/header2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -200,14 +200,14 @@ input:-ms-input-placeholder.form-control {
 
 
 #c1_item3 {
-    background-position: center center;
+    background-position: center left;
     background-image: url('img/header3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #c1_item4 {
-    background-position: center left;
+    background-position: center right;
     background-image: url('img/header4.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -329,7 +329,6 @@ input:-ms-input-placeholder.form-control {
 
 /*-------------------------- */
 /* CAROUSEL                 */
-
 .carousel .item {
   height: 680px;
 }
@@ -338,7 +337,7 @@ input:-ms-input-placeholder.form-control {
 	margin-bottom: 10px;
 }
 
-
+/* Mobile Media */
 @media all and (max-width:768px) {
     .c0 {
           margin: 5px 0px 0px 0px;
@@ -385,7 +384,7 @@ input:-ms-input-placeholder.form-control {
         margin-right: auto;
         margin-left: auto;
     }
-
+     
     .btn, .c0 .btn  {
         margin-top: 30px;
         font-weight: 700;
@@ -422,3 +421,28 @@ input:-ms-input-placeholder.form-control {
         top: 610px;
     }
 }
+
+@media (max-width: 480px) {
+    #c1_item1 {
+    background-image: url('img/header-mobile-1.jpg');
+    background-position: center top;
+    }
+
+
+    #c1_item2 {
+        background-image: url('img/header-mobile-2.jpg');
+        background-position: center top;
+    }
+
+
+    #c1_item3 {
+        background-image: url('img/header-mobile-3.jpg');
+        background-position: center top;
+    }
+
+    #c1_item4 {
+        background-image: url('img/header-mobile-4.jpg');
+        background-position: center top;
+    }
+}
+
