@@ -41,7 +41,7 @@ input:-moz-placeholder, textarea:-moz-placeholder {
   color: #aaaaaa;
 }
 
-input:-ms-input-placeholder.form-control {
+input:-ms-input-placeholder.form-control, textarea:-ms-input-placeholder.form-control {
    color: #aaaaaa;
 }
 
@@ -50,6 +50,12 @@ input:-ms-input-placeholder.form-control {
     -moz-border-radius: 2pt !important;
     box-shadow: none;
     height: 50px;
+}
+
+.form-control:focus {
+    border-color: #aaaaaa;
+    outline: none;
+    box-shadow: none;
 }
 
 .btn {
@@ -158,7 +164,7 @@ input:-ms-input-placeholder.form-control {
 .c0 h1 {
     padding-top: 200px;
 	color: #ffffff;
-	font-size: 80px;
+	font-size: 100px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	text-align: center;
@@ -222,6 +228,7 @@ input:-ms-input-placeholder.form-control {
 
 .c2 p {
     margin-bottom: 50px;
+    max-width: 710px;
 }
 
 
@@ -269,7 +276,7 @@ input:-ms-input-placeholder.form-control {
 
 
 /*-------------------------- */
-/* C5 */
+/* C5                        */
 
 .c5 h1 {
     margin-top: 50px;
@@ -284,7 +291,7 @@ input:-ms-input-placeholder.form-control {
 }
 
 /*-------------------------- */
-/* C6 */
+/* C6                       */
 .c6 {
 }
 
@@ -293,7 +300,11 @@ input:-ms-input-placeholder.form-control {
 }
 
 .c6 p {
-    margin-bottom: 120px;
+    margin-bottom: 40px;
+}
+
+.c6 .btn {
+    margin-bottom: 40px;
 }
 
 .c6 h1 {
@@ -305,7 +316,7 @@ input:-ms-input-placeholder.form-control {
 }
 
 /*-------------------------- */
-/* C7 */
+/* C7                       */
 #c7_input_email {
 }
 
@@ -320,7 +331,7 @@ input:-ms-input-placeholder.form-control {
 
 
 /*-------------------------- */
-/* C8 */
+/* C8                       */
 .c8 {
     background-color: #F5F5F5;
     padding-top: 120px;
@@ -337,7 +348,32 @@ input:-ms-input-placeholder.form-control {
 	margin-bottom: 10px;
 }
 
-/* Mobile Media */
+/*-------------------------- */
+/* Modal                    */
+.modal-body {
+    padding: 40px;
+}
+
+.modal-body h1 {
+    margin-top: 0px;
+}
+
+.modal-body p {
+    margin-bottom: 10px;
+    color: #444444;
+}
+
+#c7_modal_description {
+    color: #888888;
+    text-align: center;
+}
+
+.modal-body em {
+    color: #888888;
+}
+
+/*-------------------------- */
+/* Mobile Media             */
 @media all and (max-width:768px) {
     .c0 {
           margin: 5px 0px 0px 0px;

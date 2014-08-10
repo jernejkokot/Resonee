@@ -28,9 +28,9 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <h1>You can achieve everything</h1>
+                    <h1>Imagine, plan, achieve</h1>
                     <p>Learn from everyone's success stories</p>
-                    <button type="button" class="btn">Sign up</button>
+                    <button class="btn" type="button" data-toggle="modal" data-target="#modal-achiever">Get started</button>
                 </div>
             </div>
         </div> 
@@ -68,8 +68,8 @@
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
                     <p>
-                        Many people either don't know where to begin or don't have a clear understanding of what they really want in life.
-                        Share your success story and inspire others.
+                       Use Achievo to break your goal into smaller targets, which are more managable to accomplish.
+                       Once you've done that, it will be much easier for you to take action in achieveing your goals.
                     </p>
                 </div>
             </div>
@@ -86,8 +86,8 @@
                 <div class="col-sm-4 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                     <h1>Get support and motivation</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, metus alias, ac risus sit aliquet justo, aliquam facilisis proin lectus dui quisque.
-                        Quam lacus aenean risus, urna ut praesent pede. Etiam sed, velit pede pellentesque eu dolor et rhoncus, in ridiculus at.
+                        Achieving your goals was never so easy. Whenever you are not motivated or not sure how to proceed, 
+                        ask the community for help. They can support you, motivate you and guide you.
                     </p>
                 </div>
                 <div class="col-sm-1 col-sm-offset-1 hidden-xs line">
@@ -104,10 +104,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-sm-push-7">
-                    <h1>See your progress on one timeline </h1>
+                    <h1>Keep track of your progress</h1>
                     <p>
-                        Lorem ipsum dolor sit amet, metus alias, ac risus sit aliquet justo, aliquam facilisis proin lectus dui quisque.
-                        Quam lacus aenean risus, urna ut praesent pede. Etiam sed, velit pede pellentesque eu dolor et rhoncus, in ridiculus at.
+                        Achievo helps you to keep track of all your progress to make better decissions for achieving your goal. 
+                        You can share your success and make it visible to people you want.
                     </p>
                 </div>
                 <div class="col-sm-1 col-sm-offset-1 hidden-xs line col-sm-push-1">
@@ -124,14 +124,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1">
-                    <h1>Share your success story</h1>
+                    <h1>Share your success</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center">
                     <p>
-                        Many people either don't know where to begin or don't have a clear understanding of what they really want in life.
-                        Share your success story and inspire others.
+                        Inspire others by sharing your progress, pictures and videos that were made during achieving your goal. 
+                        Your story is private unless you want to share it.
                     </p>
                 </div>
             </div>
@@ -156,6 +156,7 @@
                         Lorem ipsum dolor sit amet, metus alias, ac risus sit aliquet justo, aliquam facilisis proin lectus dui quisque.
                         Quam lacus aenean risus, urna ut praesent pede. Etiam sed, velit pede pellentesque eu dolor et rhoncus, in ridiculus at.
                     </p>
+                    <button class="btn" type="button" data-toggle="modal" data-target="#modal-mentor">Become a mentor</button>
                 </div>
                 <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1">
                     <img src="Content/img/mentor.png" class="img-responsive center-block" />
@@ -179,22 +180,52 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                    <div class="form-group text-left" id="c7_div_email">
-                        <input type="text" class="form-control" placeholder="Enter email address" id="c7_input_email">
-                    </div>
+                <div class="col-xs-10 col-xs-offset-1">
+                    <button class="btn center-block" type="button" data-toggle="modal" data-target="#modal-achiever">Get started</button>
                 </div>
-                <div class="col-sm-2 col-xs-12">
-                    <div id="c7_div_emailSend">
-                        <button class="btn center-block" type="button" id="c7_btn_emailSend">Sign up</button>
+            </div>
+
+            <div class="modal fade" tabindex="-1" role="dialog" id="modal-achiever" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h1>Start now</h1>
+                            <p id="c7_modal_description">Sing up below if you'd like to be amog the first to experience the service, and we'll contact you personaly with more details.</p> 
+                            <br />
+                            <p>What goal do you want to achieve?</p>
+                            <textarea class="form-control" rows="3" placeholder="Describe your goal here..."></textarea>
+                            <br />
+                            <p>How can we reach you? <em>(Email, twitter, facebook, linkedin,...)</em></p>
+                            <input type="text" class="form-control" placeholder="Enter your contact information">
+                            <br />
+                            <br />
+                            <button class="btn center-block" type="button">Sumbit</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 text-center">
-                    <div id="c7_div_error" hidden>
-                        <br />
-                        <p style="color:red;">You must enter a valid email adress.</p>
+
+            <div class="modal fade" tabindex="-1" role="dialog" id="modal-mentor" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h1>Start now</h1>
+                            <p id="c7_modal_description">Sing up below if you'd like to be amog the first to experience the service, and we'll contact you personaly with more details.</p>
+                            <br />
+                            <p>What is your erea of expertiese?</p>
+                            <textarea class="form-control" rows="3"></textarea>
+                            <br />
+                            <p>Do you already coach/mentor people? How many?</p>
+                            <input type="text" class="form-control">
+                            <br />
+                            <p>How can we reach you? <em>(Email, twitter, facebook, linkedin,...)</em></p>
+                            <input type="text" class="form-control" placeholder="Enter your contact information">
+                            <br />
+                            <br />
+                            <button class="btn center-block" type="button">Sumbit</button>
+                        </div>
                     </div>
                 </div>
             </div>
