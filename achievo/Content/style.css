@@ -74,12 +74,27 @@ input:-ms-input-placeholder.form-control, textarea:-ms-input-placeholder.form-co
     font-style: normal;
 }
 
+
 .btn:hover, .btn:focus, .btn:active, .btn:visited {
     background-color: #e5493d;
     color: #ffffff;
     box-shadow: none;
+
 }
 
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+}
 
 #circle_1 {
     background: #DDDDDD;
