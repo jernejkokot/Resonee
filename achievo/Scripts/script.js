@@ -1,7 +1,7 @@
 ﻿function postContactToGoogle(Event) {
-    var MentorAreaOfExpertise = $('#MentorAreaOfExpertise').text();
+    var MentorAreaOfExpertise = $('#MentorAreaOfExpertise').val();
     var MentorNumPeople = $('#MentorNumPeople').val();
-    var Goal = $('#Goal').text();
+    var Goal = $('#Goal').val();
     var Contact = getContact();
 
     $.ajax({
@@ -38,9 +38,9 @@ function postCompleted(Event) {
             $('#c7_div_modal_achiever_tnx').show();
         }
 
-        $('#MentorAreaOfExpertise').text('');
+        $('#MentorAreaOfExpertise').val('');
         $('#MentorNumPeople').val('');
-        $('#Goal').text('');
+        $('#Goal').val('');
         $('#ContactMentor').val('');
         $('#ContactAchiever').val('');
     }
