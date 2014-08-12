@@ -411,6 +411,12 @@ p.modal_description  {
     margin-bottom: 12px;
 }
 
+.modal-body .button.close, .modal-body .close {
+    color: #888888;
+    opacity: 1;
+    font-size: 40px;
+    font-weight: 100;
+}
 
 /*-------------------------- */
 /* Mobile Media             */
