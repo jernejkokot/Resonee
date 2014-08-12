@@ -77,26 +77,23 @@ input:-ms-input-placeholder.form-control, textarea:-ms-input-placeholder.form-co
     font-style: normal;
 }
 
-#a_facebook {
-    margin-top: 10px;
+.btn:hover, .btn:focus, .btn:active, .btn:visited {
+    background-color: #e63e31;
+    color: #ffffff;
+    box-shadow: none;
+    
+}
+
+.btn_social {
+    margin-top: 0px;
     margin-bottom: 40px;
     margin-right: 5px;
     padding: 10px 30px 10px 30px;
-    background-color: #3B5998;
     color: #ffffff;
      border-radius: 2pt !important;
     -moz-border-radius: 2pt !important;
-    font-size: 16px;
-}
-
-#a_facebook:hover, #a_facebook:focus, #a_facebook:active {
-    background-color: #273f80;
-    text-decoration: none;
-}
-
-#a_twitter:hover, #a_twitter:focus, #a_twitter:active {
-    background-color: #008ec8;
-    text-decoration: none;
+    font-size: 15px;
+    width: 250px;
 }
 
 i.fa {
@@ -106,27 +103,26 @@ i.fa {
     left: -10px;
 }
 
-#a_twitter {
-    margin-top: 10px;
-    margin-bottom: 40px;
-    margin-left: 5px;
-    padding: 10px 30px 10px 30px;
+#btn_facebook {
+ background-color: #3B5998;
+}
+
+#btn_twitter {
     background-color: #55ACEE;
-    color: #ffffff;
-     border-radius: 2pt !important;
-    -moz-border-radius: 2pt !important;
-    font-size: 16px;
+}
+
+#btn_facebook:hover, #btn_facebook:focus, #btn_facebook:active {
+    background-color: #273f80;
+    text-decoration: none;
+}
+
+#btn_twitter:hover, #btn_twitter:focus, #btn_twitter:active {
+    background-color: #008ec8;
+    text-decoration: none;
 }
 
 #c7_div_modal_achiever_tnx, #c7_div_modal_mentor_tnx {
     padding-bottom: 30px;
-}
-
-.btn:hover, .btn:focus, .btn:active, .btn:visited {
-    background-color: #e63e31;
-    color: #ffffff;
-    box-shadow: none;
-
 }
 
 textarea:hover, 
@@ -545,6 +541,10 @@ p.modal_description  {
     p.modal_description {
         text-align: center;
     }
+
+    .modal-body .btn_social {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -621,5 +621,9 @@ p.modal_description  {
         font-size: 16px;
     }    
 
+
+    .modal-body .btn_social {
+        width: 100%;
+    }
 }
 
