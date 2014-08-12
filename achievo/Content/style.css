@@ -399,7 +399,7 @@ p.modal_description  {
 
 /*-------------------------- */
 /* Mobile Media             */
-@media all and (max-width:780px) {
+@media all and (max-width:992px) {
     h1, .c1 h1, .c2 h1, .c3 h1, .c4 h1, .c5 h1, .c6 h1 {
         text-align: center;
         margin-top: 80px;
