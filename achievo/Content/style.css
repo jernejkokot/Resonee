@@ -85,10 +85,12 @@ input:-ms-input-placeholder.form-control, textarea:-ms-input-placeholder.form-co
 }
 
 .btn_social {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
     margin-top: 0px;
     margin-bottom: 40px;
     margin-right: 5px;
-    padding: 10px 30px 10px 30px;
+    padding: 5px 30px 10px 30px;
     color: #ffffff;
      border-radius: 2pt !important;
     -moz-border-radius: 2pt !important;
@@ -121,7 +123,7 @@ i.fa {
     text-decoration: none;
 }
 
-#c7_div_modal_achiever_tnx, #c7_div_modal_mentor_tnx {
+#div_modal_achiever_tnx, #div_modal_mentor_tnx {
     padding-bottom: 30px;
 }
 
@@ -204,13 +206,9 @@ button:hover
 }
 
 .c0 .logo {
- text-align: left;
- font-size: 24px;
- font-weight: 700;
- text-transform: uppercase;
- color: #ffffff;
- font-family: "europa", sans-serif;
- letter-spacing: 0.1em;
+    background-image: url('img/logo.png');
+    width: 113px;
+    height: 23px;
 }
 
 .c0 .video {
@@ -381,18 +379,15 @@ button:hover
 
 /*-------------------------- */
 /* C7                       */
-#c7_input_email {
-}
-
 .c7 {
     background-color: #F5F5F5;
     padding-bottom: 120px;
 }
 
 .c7 p {
-    margin-bottom: 90px;
+    max-width: 560px;
+    margin: 0px auto 90px auto;
 }
-
 
 /*-------------------------- */
 /* C8                       */
@@ -400,10 +395,6 @@ button:hover
     background-color: #F5F5F5;
     padding-top: 110px;
     padding-bottom: 90px;
-}
-
-.c8 p {
-
 }
 
 /*-------------------------- */
@@ -487,11 +478,13 @@ p.modal_description  {
     }
     
     .c0 {
-          margin: 5px 0px 0px 0px;
+          margin: 10px 0px 0px 20px;
     }
 
     .c0 .logo {
-        font-size: 12px;
+        background-image: url('img/logo-small.png');
+        width: 60px;
+        height: 12px;
     }
      
     .c0 .video {
@@ -627,3 +620,17 @@ p.modal_description  {
     }
 }
 
+@media all and (min-width:1920px) {
+    .c0 h1 {
+        Padding-top: 300px;
+        Font-size: 140px;
+    }
+
+    .c0 p {
+        font-size: 24px;
+    }
+
+    .carousel .item {
+        height: 960px;
+    }
+}

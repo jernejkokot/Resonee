@@ -30,12 +30,12 @@ function postCompleted(Event) {
     if (Event == 'btn_submit_mentor' || Event == 'btn_submit_achiever')
     {
         if ($("#modal_mentor").attr("aria-hidden") == 'false') {
-            $('#c7_div_modal_mentor_form').hide();
-            $('#c7_div_modal_mentor_tnx').show();
+            $('#div_modal_mentor_form').hide();
+            $('#div_modal_mentor_tnx').show();
         }
         if ($("#modal_achiever").attr("aria-hidden") == 'false') {
-            $('#c7_div_modal_achiever_form').hide();
-            $('#c7_div_modal_achiever_tnx').show();
+            $('#div_modal_achiever_form').hide();
+            $('#div_modal_achiever_tnx').show();
         }
 
         $('#MentorAreaOfExpertise').val('');
@@ -47,13 +47,13 @@ function postCompleted(Event) {
 }
 
 $('#modal_achiever').on('hidden.bs.modal', function (e) {
-    $('#c7_div_modal_achiever_form').show();
-    $('#c7_div_modal_achiever_tnx').hide();
+    $('#div_modal_achiever_form').show();
+    $('#div_modal_achiever_tnx').hide();
 })
 
 $('#modal_mentor').on('hidden.bs.modal', function (e) {
-    $('#c7_div_modal_mentor_form').show();
-    $('#c7_div_modal_mentor_tnx').hide();
+    $('#div_modal_mentor_form').show();
+    $('#div_modal_mentor_tnx').hide();
 })
 
 function getContact() {
