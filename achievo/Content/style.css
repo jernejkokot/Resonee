@@ -376,7 +376,7 @@ button:hover
 /*-------------------------- */
 /* Modal                    */
 .modal-body {
-    padding: 40px;
+    padding: 30px;
 }
 
 .modal-body h1 {
@@ -540,6 +540,10 @@ p.modal_description  {
         padding-top: 0px;
         padding-bottom: 40px;
     }
+
+    .modal-body {
+    padding: 10px;
+}
 
 }
 
