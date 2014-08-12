@@ -481,26 +481,6 @@ p.modal_description  {
 
 }
 
-@media (min-width: 768px) and (max-width: 992px) 
-{
-    /*Global*/
-    .line {
-        height:610px;
-    }
-
-    #circle_2 {
-        top: 240px;
-    }
-
-    #circle_3 {
-        top: 136px;
-    }
-
-    #circle_4 {
-        top: 610px;
-    }
-}
-
 @media (max-width: 480px) {
     #c1_item1 {
     background-image: url('img/header-mobile-1.jpg');
@@ -523,5 +503,19 @@ p.modal_description  {
         background-image: url('img/header-mobile-4.jpg');
         background-position: center top;
     }
+
+    .c0 h1 {
+        font-size: 60px;
+        line-height: 60px;
+        padding-bottom: 10px;
+    }
+
+    .c2 h1, .c3 h1, .c4 h1, .c5 h1, .c6 h1 {
+        margin-bottom: 20px;
+    }
+
+    .c2 p, .c3 p, .c4 p, .c5 p, .c6 p, .c7 p {
+        margin-bottom: 25px;
+    } 
 }
 
