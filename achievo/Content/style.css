@@ -566,5 +566,14 @@ p.modal_description  {
         padding: 15px;
     }
 
+    .modal-body h1 {
+        margin-top: 0px;
+    }
+
+    .modal-body p {
+        margin-bottom: 10px;
+        line-height: 22px;
+    }    
+
 }
 
