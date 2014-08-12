@@ -409,10 +409,11 @@ p.modal_description  {
 .modal-body .btn {
     margin-top: 40px;
     margin-bottom: 12px;
+    
 }
 
-.modal-body .button.close, .modal-body .close {
-    color: #888888;
+.modal-body .close {
+    color: #aaaaaa;
     opacity: 1;
     font-size: 40px;
     font-weight: 100;
