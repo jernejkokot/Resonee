@@ -77,6 +77,51 @@ input:-ms-input-placeholder.form-control, textarea:-ms-input-placeholder.form-co
     font-style: normal;
 }
 
+#a_facebook {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-right: 5px;
+    padding: 10px 30px 10px 30px;
+    background-color: #3B5998;
+    color: #ffffff;
+     border-radius: 2pt !important;
+    -moz-border-radius: 2pt !important;
+    font-size: 16px;
+}
+
+#a_facebook:hover, #a_facebook:focus, #a_facebook:active {
+    background-color: #273f80;
+    text-decoration: none;
+}
+
+#a_twitter:hover, #a_twitter:focus, #a_twitter:active {
+    background-color: #008ec8;
+    text-decoration: none;
+}
+
+i.fa {
+    font-size: 24px;
+    position: relative;
+    top: 2px;
+    left: -10px;
+}
+
+#a_twitter {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 5px;
+    padding: 10px 30px 10px 30px;
+    background-color: #55ACEE;
+    color: #ffffff;
+     border-radius: 2pt !important;
+    -moz-border-radius: 2pt !important;
+    font-size: 16px;
+}
+
+#c7_div_modal_achiever_tnx, #c7_div_modal_mentor_tnx {
+    padding-bottom: 30px;
+}
+
 .btn:hover, .btn:focus, .btn:active, .btn:visited {
     background-color: #e63e31;
     color: #ffffff;
@@ -418,6 +463,7 @@ p.modal_description  {
     font-weight: 100;
 }
 
+
 /*-------------------------- */
 /* Mobile Media             */
 @media all and (max-width:992px) {
@@ -499,7 +545,6 @@ p.modal_description  {
     p.modal_description {
         text-align: center;
     }
-
 }
 
 @media (max-width: 480px) {
@@ -573,6 +618,7 @@ p.modal_description  {
     .modal-body p {
         margin-bottom: 10px;
         line-height: 22px;
+        font-size: 16px;
     }    
 
 }
