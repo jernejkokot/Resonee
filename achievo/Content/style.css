@@ -77,9 +77,8 @@ input:-ms-input-placeholder.form-control, textarea:-ms-input-placeholder.form-co
     font-style: normal;
 }
 
-
 .btn:hover, .btn:focus, .btn:active, .btn:visited {
-    background-color: #e5493d;
+    background-color: #e63e31;
     color: #ffffff;
     box-shadow: none;
 
@@ -415,7 +414,7 @@ p.modal_description  {
 .modal-body .close {
     color: #aaaaaa;
     opacity: 1;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 100;
 }
 
