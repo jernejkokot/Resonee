@@ -31,14 +31,14 @@ h1 {
 	text-transform: none;
 	text-align: center;
     margin-top: 105px;
-    margin-bottom: 30px;    
-
+    margin-bottom: 30px;
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #aaaaaa;
   font-weight: 400;
 }
+
 input:-moz-placeholder, textarea:-moz-placeholder {
   color: #aaaaaa;
   font-weight: 400;
@@ -81,7 +81,6 @@ input:-ms-input-placeholder.form-control, textarea:-ms-input-placeholder.form-co
     background-color: #e63e31;
     color: #ffffff;
     box-shadow: none;
-    
 }
 
 .btn_social {
