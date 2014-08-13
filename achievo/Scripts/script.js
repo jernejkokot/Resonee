@@ -76,6 +76,5 @@ function getUserID() {
 //init webpage
 $(function () {
     getUserID();
-    alert(UserId);
     postContactToGoogle('pageVisit');
 })
