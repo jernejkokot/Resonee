@@ -1,4 +1,6 @@
-﻿function postContactToGoogle(Event) {
+﻿var UserId = "";
+
+function postContactToGoogle(Event) {
     var MentorAreaOfExpertise = $('#MentorAreaOfExpertise').val();
     var MentorNumPeople = $('#MentorNumPeople').val();
     var Goal = $('#Goal').val();
@@ -9,9 +11,10 @@
         data: {
             "entry_1366658802": MentorAreaOfExpertise,
             "entry_1022791929": MentorNumPeople,
-            "entry_633901515" : Goal,
-            "entry_361554818" : Contact,
+            "entry_633901515": Goal,
+            "entry_361554818": Contact,
             "entry_1064863439": Event,
+            "entry_1058723906": UserId
         },
         type: "POST",
         dataType: "xml",
@@ -27,8 +30,7 @@
 }
 
 function postCompleted(Event) {
-    if (Event == 'btn_submit_mentor' || Event == 'btn_submit_achiever')
-    {
+    if (Event == 'btn_submit_mentor' || Event == 'btn_submit_achiever') {
         if ($("#modal_mentor").attr("aria-hidden") == 'false') {
             $('#div_modal_mentor_form').hide();
             $('#div_modal_mentor_tnx').show();
@@ -63,10 +65,17 @@ function getContact() {
     if ($("#modal_achiever").attr("aria-hidden") == 'false') {
         return $('#ContactAchiever').val();
     }
+}
 
+function getUserID() {
+    if (UserId == "") {
+        UserId = "User-" + Math.floor((Math.random() * 10000) + 1);
+    }
 }
 
 //init webpage
 $(function () {
+    getUserID();
+    alert(UserId);
     postContactToGoogle('pageVisit');
 })
