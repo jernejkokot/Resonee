@@ -20,7 +20,7 @@ function postContactToGoogle(Event) {
             "entry_832297084": test
         },
         type: "POST",
-        dataType: "xml",
+        dataType: "xml", 
         statusCode: {
             0: function () {
                 postCompleted(Event);
@@ -53,7 +53,7 @@ function postCompleted(Event) {
 
 $('#modal_achiever').on('show.bs.modal', function (e) {
 
-    if (typeof numModalAchiever === "undefined")
+    if (typeof ModalAchieverForm === "undefined")
     {
         ModalAchieverForm = "#div_modal_achiever_form_" + Math.round(Math.random());
         $(ModalAchieverForm).show();
