@@ -1,10 +1,12 @@
-﻿
+﻿var ModalAchieverForm;
+
 function postContactToGoogle(Event) {
     var MentorAreaOfExpertise = $('#MentorAreaOfExpertise').val();
     var MentorNumPeople = $('#MentorNumPeople').val();
     var Goal = $('#Goal').val();
     var Contact = getContact();
     var UserId = $.cookie('UserId');
+    var test = ModalAchieverForm;
 
     $.ajax({
         url: "https://docs.google.com/forms/d/13k1RI3imO4c0R6c-rhPHkuzZXux8a1k593rlNPP8kco/formResponse",
@@ -14,7 +16,8 @@ function postContactToGoogle(Event) {
             "entry_633901515": Goal,
             "entry_361554818": Contact,
             "entry_1064863439": Event,
-            "entry_1058723906": UserId
+            "entry_1058723906": UserId,
+            "entry_832297084": test
         },
         type: "POST",
         dataType: "xml",
@@ -36,7 +39,7 @@ function postCompleted(Event) {
             $('#div_modal_mentor_tnx').show();
         }
         if ($("#modal_achiever").attr("aria-hidden") == 'false') {
-            $('#div_modal_achiever_form').hide();
+            $(ModalAchieverForm).hide();
             $('#div_modal_achiever_tnx').show();
         }
 
@@ -48,8 +51,17 @@ function postCompleted(Event) {
     }
 }
 
+$('#modal_achiever').on('show.bs.modal', function (e) {
+
+    if (typeof numModalAchiever === "undefined")
+    {
+        ModalAchieverForm = "#div_modal_achiever_form_" + Math.round(Math.random());
+        $(ModalAchieverForm).show();
+    }
+})
+
 $('#modal_achiever').on('hidden.bs.modal', function (e) {
-    $('#div_modal_achiever_form').show();
+    $(ModalAchieverForm).show();
     $('#div_modal_achiever_tnx').hide();
 })
 
