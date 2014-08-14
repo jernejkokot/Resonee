@@ -1,10 +1,10 @@
-﻿var UserId = "";
-
+﻿
 function postContactToGoogle(Event) {
     var MentorAreaOfExpertise = $('#MentorAreaOfExpertise').val();
     var MentorNumPeople = $('#MentorNumPeople').val();
     var Goal = $('#Goal').val();
     var Contact = getContact();
+    var UserId = $.cookie('UserId');
 
     $.ajax({
         url: "https://docs.google.com/forms/d/13k1RI3imO4c0R6c-rhPHkuzZXux8a1k593rlNPP8kco/formResponse",
@@ -68,13 +68,16 @@ function getContact() {
 }
 
 function getUserID() {
-    if (UserId == "") {
-        UserId = "User-" + Math.floor((Math.random() * 10000) + 1);
-    }
+    var result = "User-" + Math.floor((Math.random() * 10000) + 1);
+    return result;
 }
 
 //init webpage
 $(function () {
-    getUserID();
+    var cookie = $.cookie('UserId');
+    if (typeof cookie === "undefined") {
+        var UserId = getUserID();
+        $.cookie('UserId', UserId, { expires: 14, path: '/' });
+    }
     postContactToGoogle('pageVisit');
 })
