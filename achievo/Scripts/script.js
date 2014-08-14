@@ -52,12 +52,7 @@ function postCompleted(Event) {
 }
 
 $('#modal_achiever').on('show.bs.modal', function (e) {
-
-    if (typeof ModalAchieverForm === "undefined")
-    {
-        ModalAchieverForm = "#div_modal_achiever_form_" + Math.round(Math.random());
-        $(ModalAchieverForm).show();
-    }
+    $(ModalAchieverForm).show();
 })
 
 $('#modal_achiever').on('hidden.bs.modal', function (e) {
@@ -90,6 +85,9 @@ $(function () {
     if (typeof cookie === "undefined") {
         var UserId = getUserID();
         $.cookie('UserId', UserId, { expires: 14, path: '/' });
+    }
+    if (typeof ModalAchieverForm === "undefined") {
+        ModalAchieverForm = "#div_modal_achiever_form_" + Math.round(Math.random());
     }
     postContactToGoogle('pageVisit');
 })
