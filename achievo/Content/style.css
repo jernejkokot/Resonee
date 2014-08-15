@@ -220,18 +220,17 @@ button:hover
 }
 
 .c0 .logo {
-    background-image: url('img/logo.png');
-    width: 113px;
-    height: 23px;
-    background-repeat: no-repeat;
+    text-align: left;
 }
 
-.c0 .video {
- text-align: right;
- font-weight: 400;
- font-size: 18px;
- color: #ffffff;
- font-family: "europa", sans-serif;
+.c0 .social {
+    text-align: right;
+}
+
+.c0 .social img {
+    height: 18px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .c0 h1 {
@@ -412,6 +411,19 @@ button:hover
     padding-bottom: 90px;
 }
 
+.c8 a {
+    margin-left: 15px;
+}
+
+.c8 a, .c8 a:focus, .c8:active, .c8 a:visited {
+    color: #888888;
+}
+
+.c8 a:hover {
+    text-decoration: none;
+    color: #e63e31;
+}
+
 /*-------------------------- */
 /* CAROUSEL                 */
 .carousel .item {
@@ -494,17 +506,17 @@ p.modal_description  {
     }
     
     .c0 {
-          margin: 18px 0px 0px 20px;
+          margin: 18px 20px 0px 20px;
     }
 
-    .c0 .logo {
-        background-image: url('img/logo-small.png');
+    .c0 .logo image {
+        
         width: 60px;
         height: 12px;
     }
      
-    .c0 .video {
-           font-size: 15px;
+    .c0 .social image {
+        height: 12px;
     }
 
     .c0 h1 {

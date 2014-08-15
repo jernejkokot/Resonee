@@ -1,7 +1,7 @@
 ﻿var ModalAchieverForm;
 
 function postContactToGoogle(Event) {
-    try {
+
         var MentorAreaOfExpertise = $('#MentorAreaOfExpertise').val();
         var MentorNumPeople = $('#MentorNumPeople').val();
         var Goal = $('#Goal').val();
@@ -31,9 +31,6 @@ function postContactToGoogle(Event) {
                 }
             }
         });
-    } catch (e) {
-        alert("Exception " + e.message);
-    }
 }
 
 function postCompleted(Event) {
@@ -83,8 +80,17 @@ function getUserID() {
     return result;
 }
 
+function getEmail() {
+    var emailriddlerarray = [105, 110, 102, 111, 64, 114, 101, 115, 111, 110, 101, 101, 46, 99, 111, 109]
+    var encryptedemail_id26 = '' //variable to contain encrypted email 
+    for (var i = 0; i < emailriddlerarray.length; i++)
+        encryptedemail_id26 += String.fromCharCode(emailriddlerarray[i])
+    return encryptedemail_id26;
+}
+
 //init webpage
 $(function () {
+    $('#Email').attr('href', "mailto:"+getEmail());
     var cookie = $.cookie('UserId');
     if (typeof cookie === "undefined") {
         var UserId = getUserID();
