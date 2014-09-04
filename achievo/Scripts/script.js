@@ -2,35 +2,42 @@
 
 function postContactToGoogle(Event) {
 
-        var MentorAreaOfExpertise = $('#MentorAreaOfExpertise').val();
-        var MentorNumPeople = $('#MentorNumPeople').val();
-        var Goal = $('#Goal').val();
-        var Contact = getContact();
-        var UserId = $.cookie('UserId');
-        var test = ModalAchieverForm;
+    var MentorAreaOfExpertise = $('#MentorAreaOfExpertise').val();
+    var MentorNumPeople = $('#MentorNumPeople').val();
+    var Goal = $('#Goal').val();
+    var Contact = getContact();
+    var UserId = $.cookie('UserId');
+    var test = ModalAchieverForm;
+    var ipAdress = "";
 
-        $.ajax({
-            url: "https://docs.google.com/forms/d/13k1RI3imO4c0R6c-rhPHkuzZXux8a1k593rlNPP8kco/formResponse",
-            data: {
-                "entry_1366658802": MentorAreaOfExpertise,
-                "entry_1022791929": MentorNumPeople,
-                "entry_633901515": Goal,
-                "entry_361554818": Contact,
-                "entry_1064863439": Event,
-                "entry_1058723906": UserId,
-                "entry_832297084": test
+    $.getJSON("http://jsonip.com?callback=?", function (data) {
+        ipAdress = data.ip;
+    });
+
+
+    $.ajax({
+        url: "https://docs.google.com/forms/d/13k1RI3imO4c0R6c-rhPHkuzZXux8a1k593rlNPP8kco/formResponse",
+        data: {
+            "entry_1366658802": MentorAreaOfExpertise,
+            "entry_1022791929": MentorNumPeople,
+            "entry_633901515": Goal,
+            "entry_361554818": Contact,
+            "entry_1064863439": Event,
+            "entry_1058723906": UserId + ", ip: " + ipAdress,
+            "entry_832297084": test
+        },
+        type: "POST",
+        dataType: "xml",
+        statusCode: {
+            0: function () {
+                postCompleted(Event);
             },
-            type: "POST",
-            dataType: "xml",
-            statusCode: {
-                0: function () {
-                    postCompleted(Event);
-                },
-                200: function () {
-                    postCompleted(Event);
-                }
+            200: function () {
+                postCompleted(Event);
             }
-        });
+        }
+    });
+
 }
 
 function postCompleted(Event) {
