@@ -1,58 +1,39 @@
 ﻿var ModalAchieverForm;
 
-function myIP() {
-    if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
-    else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-
-    xmlhttp.open("GET", "http://api.hostip.info/get_html.php", false);
-    xmlhttp.send();
-
-    hostipInfo = xmlhttp.responseText.split("\n");
-
-    for (i = 0; hostipInfo.length >= i; i++) {
-        ipAddress = hostipInfo[i].split(":");
-        if (ipAddress[0] == "IP") return ipAddress[1];
-    }
-
-    return false;
-}
-
 function postContactToGoogle(Event) {
+    
+        var MentorAreaOfExpertise = $('#MentorAreaOfExpertise').val();
+        var MentorNumPeople = $('#MentorNumPeople').val();
+        var Goal = $('#Goal').val();
+        var Contact = getContact();
+        var UserId = $.cookie('UserId');
+        var test = ModalAchieverForm;
+        var ipAdress = "";
 
-    var MentorAreaOfExpertise = $('#MentorAreaOfExpertise').val();
-    var MentorNumPeople = $('#MentorNumPeople').val();
-    var Goal = $('#Goal').val();
-    var Contact = getContact();
-    var UserId = $.cookie('UserId');
-    var test = ModalAchieverForm;
-    var ipAdress = myIP();
-
-
-
-
-    $.ajax({
-        url: "https://docs.google.com/forms/d/13k1RI3imO4c0R6c-rhPHkuzZXux8a1k593rlNPP8kco/formResponse",
-        data: {
-            "entry_1366658802": MentorAreaOfExpertise,
-            "entry_1022791929": MentorNumPeople,
-            "entry_633901515": Goal,
-            "entry_361554818": Contact,
-            "entry_1064863439": Event,
-            "entry_1058723906": UserId + ", ip: " + ipAdress,
-            "entry_832297084": test
-        },
-        type: "POST",
-        dataType: "xml",
-        statusCode: {
-            0: function () {
-                postCompleted(Event);
-            },
-            200: function () {
-                postCompleted(Event);
-            }
+        if (UserId != "User-4142") {
+            $.ajax({
+                url: "https://docs.google.com/forms/d/13k1RI3imO4c0R6c-rhPHkuzZXux8a1k593rlNPP8kco/formResponse",
+                data: {
+                    "entry_1366658802": MentorAreaOfExpertise,
+                    "entry_1022791929": MentorNumPeople,
+                    "entry_633901515": Goal,
+                    "entry_361554818": Contact,
+                    "entry_1064863439": Event,
+                    "entry_1058723906": UserId,
+                    "entry_832297084": test
+                },
+                type: "POST",
+                dataType: "xml",
+                statusCode: {
+                    0: function () {
+                        postCompleted(Event);
+                    },
+                    200: function () {
+                        postCompleted(Event);
+                    }
+                }
+            });
         }
-    });
-
 }
 
 function postCompleted(Event) {
