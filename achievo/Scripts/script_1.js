@@ -1,5 +1,22 @@
 ﻿var ModalAchieverForm;
 
+function myIP() {
+    if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
+    else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+    xmlhttp.open("GET", "http://api.hostip.info/get_html.php", false);
+    xmlhttp.send();
+
+    hostipInfo = xmlhttp.responseText.split("\n");
+
+    for (i = 0; hostipInfo.length >= i; i++) {
+        ipAddress = hostipInfo[i].split(":");
+        if (ipAddress[0] == "IP") return ipAddress[1];
+    }
+
+    return false;
+}
+
 function postContactToGoogle(Event) {
 
     var MentorAreaOfExpertise = $('#MentorAreaOfExpertise').val();
@@ -8,11 +25,9 @@ function postContactToGoogle(Event) {
     var Contact = getContact();
     var UserId = $.cookie('UserId');
     var test = ModalAchieverForm;
-    var ipAdress = "";
+    var ipAdress = myIP();
 
-    $.getJSON("http://jsonip.com?callback=?", function (data) {
-        ipAdress = data.ip;
-    });
+
 
 
     $.ajax({
