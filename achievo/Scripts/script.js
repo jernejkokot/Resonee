@@ -95,7 +95,7 @@ function getEmail() {
 $(function () {
     $('#Email').attr('href', "mailto:"+getEmail());
     var cookie = $.cookie('UserId');
-    if (typeof cookie === "undefined") {
+    if ((typeof cookie === "undefined") || (cookie == "")) {
         UserId = getUserID();
         $.cookie('UserId', UserId, { expires: 14, path: '/' });
     }
