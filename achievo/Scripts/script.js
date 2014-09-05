@@ -9,7 +9,7 @@ function postContactToGoogle(Event) {
         var test = ModalAchieverForm;
         var userId = getUser();
 
-        if (UserId != "User-4142" || userId != "94.180.104.7") {
+        if (userId != "94.180.104.7") {
             $.ajax({
                 url: "https://docs.google.com/forms/d/13k1RI3imO4c0R6c-rhPHkuzZXux8a1k593rlNPP8kco/formResponse",
                 data: {
