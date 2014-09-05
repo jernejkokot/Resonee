@@ -1,5 +1,4 @@
 ﻿var ModalAchieverForm;
-var UserId;
 
 function postContactToGoogle(Event) {
     
@@ -8,8 +7,9 @@ function postContactToGoogle(Event) {
         var Goal = $('#Goal').val();
         var Contact = getContact();
         var test = ModalAchieverForm;
+        var userId = getUser();
 
-        if (UserId != "User-4142" || myIp != "94.180.104.7") {
+        if (UserId != "User-4142" || userId != "94.180.104.7") {
             $.ajax({
                 url: "https://docs.google.com/forms/d/13k1RI3imO4c0R6c-rhPHkuzZXux8a1k593rlNPP8kco/formResponse",
                 data: {
@@ -18,7 +18,7 @@ function postContactToGoogle(Event) {
                     "entry_633901515": Goal,
                     "entry_361554818": Contact,
                     "entry_1064863439": Event,
-                    "entry_1058723906": UserId,
+                    "entry_1058723906": userId,
                     "entry_832297084": test
                 },
                 type: "POST",
@@ -35,7 +35,7 @@ function postContactToGoogle(Event) {
         }
 }
 
-function myIP() {
+function getUser() {
     if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
     else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 
@@ -51,8 +51,6 @@ function myIP() {
 
     return false;
 }
-
-
 
 function postCompleted(Event) {
     if (Event == 'btn_submit_mentor' || Event == 'btn_submit_achiever') {
@@ -112,14 +110,6 @@ function getEmail() {
 //init webpage
 $(function () {
     $('#Email').attr('href', "mailto:"+getEmail());
-    var cookie = $.cookie('UserId');
-    if ((typeof cookie === "undefined") || (cookie == "")) {
-        UserId = getUserID();
-        $.cookie('UserId', UserId, { expires: 14, path: '/' });
-    }
-    else {
-        UserId = cookie;
-    }
     if (typeof ModalAchieverForm === "undefined") {
         ModalAchieverForm = "#div_modal_achiever_form_" + Math.round(Math.random());
     }
