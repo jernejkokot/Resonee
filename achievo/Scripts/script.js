@@ -9,8 +9,7 @@ function postContactToGoogle(Event) {
         var Contact = getContact();
         var test = ModalAchieverForm;
 
-
-        if (UserId != "User-4142") {
+        if (UserId != "User-4142" || myIp != "94.180.104.7") {
             $.ajax({
                 url: "https://docs.google.com/forms/d/13k1RI3imO4c0R6c-rhPHkuzZXux8a1k593rlNPP8kco/formResponse",
                 data: {
@@ -35,6 +34,25 @@ function postContactToGoogle(Event) {
             });
         }
 }
+
+function myIP() {
+    if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();
+    else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+    xmlhttp.open("GET", "http://api.hostip.info/get_html.php", false);
+    xmlhttp.send();
+
+    hostipInfo = xmlhttp.responseText.split("\n");
+
+    for (i = 0; hostipInfo.length >= i; i++) {
+        ipAddress = hostipInfo[i].split(":");
+        if (ipAddress[0] == "IP") return ipAddress[1];
+    }
+
+    return false;
+}
+
+
 
 function postCompleted(Event) {
     if (Event == 'btn_submit_mentor' || Event == 'btn_submit_achiever') {
