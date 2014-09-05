@@ -7,9 +7,8 @@ function postContactToGoogle(Event) {
         var MentorNumPeople = $('#MentorNumPeople').val();
         var Goal = $('#Goal').val();
         var Contact = getContact();
-        
         var test = ModalAchieverForm;
-        var ipAdress = "";
+
 
         if (UserId != "User-4142") {
             $.ajax({
@@ -96,7 +95,7 @@ function getEmail() {
 $(function () {
     $('#Email').attr('href', "mailto:"+getEmail());
     var cookie = $.cookie('UserId');
-    if (typeof cookie === "undefined" || "") {
+    if (typeof cookie === "undefined") {
         UserId = getUserID();
         $.cookie('UserId', UserId, { expires: 14, path: '/' });
     }
