@@ -99,6 +99,9 @@ $(function () {
         UserId = getUserID();
         $.cookie('UserId', UserId, { expires: 14, path: '/' });
     }
+    else {
+        UserId = cookie;
+    }
     if (typeof ModalAchieverForm === "undefined") {
         ModalAchieverForm = "#div_modal_achiever_form_" + Math.round(Math.random());
     }
