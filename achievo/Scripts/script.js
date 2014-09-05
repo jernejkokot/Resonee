@@ -1,4 +1,5 @@
 ﻿var ModalAchieverForm;
+var UserId;
 
 function postContactToGoogle(Event) {
     
@@ -6,7 +7,7 @@ function postContactToGoogle(Event) {
         var MentorNumPeople = $('#MentorNumPeople').val();
         var Goal = $('#Goal').val();
         var Contact = getContact();
-        var UserId = $.cookie('UserId');
+        
         var test = ModalAchieverForm;
         var ipAdress = "";
 
@@ -95,8 +96,8 @@ function getEmail() {
 $(function () {
     $('#Email').attr('href', "mailto:"+getEmail());
     var cookie = $.cookie('UserId');
-    if (typeof cookie === "undefined") {
-        var UserId = getUserID();
+    if (typeof cookie === "undefined" || "") {
+        UserId = getUserID();
         $.cookie('UserId', UserId, { expires: 14, path: '/' });
     }
     if (typeof ModalAchieverForm === "undefined") {
