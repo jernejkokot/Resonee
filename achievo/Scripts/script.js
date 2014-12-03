@@ -7,7 +7,7 @@ function postContactToGoogle(Event) {
         var Goal = $('#Goal').val();
         var Contact = getContact();
         var test = ModalAchieverForm;
-        var userId = getUser();
+        var userId = getUserID();
 
         if (userId != "94.180.104.7") {
             $.ajax({
